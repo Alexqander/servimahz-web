@@ -1,0 +1,33 @@
+:root {
+    --AzulPrincipal: #2ECEF2;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+}
+
+.sec-nosotros {
+    height: 1000px;
+    background-image: url('../img/servifon.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #F5F5F5;
+    padding: 10px;
+    background-color: rgb(52, 52, 52);
+    background-blend-mode: soft-light;
+}
+
+.sec-nosotros>h3 {
+    font-family: var(--FuentePrincipal);
+    font-size: 3.0em;
+    font-weight: 600;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.sec-nosotros>h4 {
+    font-family: var(--FuentePrincipal);
+    font-size: 2.0em;
+    font-weight: 500;
+    margin-left: 1.5em;
+    margin-top: 1em;
+    padding-right: 5em;
+}

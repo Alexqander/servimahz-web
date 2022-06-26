@@ -1,0 +1,31 @@
+:root {
+    --AzulPrincipal: #2ECEF2;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+}
+
+footer {
+    background-color: var(--AzulPrincipal);
+    height: auto;
+    color: white;
+    font-family: var(--FuentePrincipal);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.caja-nom {
+    border-left: 1px solid white;
+    height: 80px;
+    width: min-content;
+}
+
+.marca {
+    font-size: 40px;
+}
+
+.descrip {
+    font-size: 20px;
+}

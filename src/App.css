@@ -1,0 +1,120 @@
+:root {
+  --AzulPrincipal: #2ECEF2;
+  --BgMain: #F5F5F5;
+  --FuentePrincipal: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--BgMain);
+}
+
+.navPrincipal {
+  background-color: var(--AzulPrincipal);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.marca {
+  font-family: var(--FuentePrincipal);
+  font-size: 35px;
+  color: #ffff;
+  text-decoration: none;
+}
+
+.enlace {
+  font-family: var(--FuentePrincipal);
+  font-size: 20px;
+  color: #ffff;
+  font-style: inherit;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.titulo>h2 {
+  font-family: var(--FuentePrincipal);
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.titulo>h5 {
+  font-family: var(--FuentePrincipal);
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.cajaImg {
+  padding: 0;
+}
+
+
+.lavadora {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.btn-contacto {
+  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+
+.btn-contacto:hover {
+  background-position: right center;
+  transition: 0.5s;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-informacion {
+  color: var(--AzulPrincipal);
+  width: 150px;
+  border: 1px solid var(--AzulPrincipal);
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  text-align: center;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
