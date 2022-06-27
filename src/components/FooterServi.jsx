@@ -20,21 +20,21 @@ export const FooterServi = () => {
                   <div className="d-flex align-items-center justify-content-end my-3">
                       <img src={telefono} width="30px" height="30px" className="mx-3" />
                     <div>
-                      <h4>7773210948</h4>
-                      <h4>7772412087</h4>
+                      <h4 className="contact-info">7773210948</h4>
+                      <h4 className="contact-info" >7772412087</h4>
                     </div>
                   </div>
                   <div className="d-flex align-items-center justify-content-end my-3">
                        <img src={whatsapp} width="30px" height="30px" className="mx-3" />
-                  <h4>7774576803</h4>
+                  <h4 className="contact-info">7774576803</h4>
                     </div>
                   <div className="d-flex align-items-center justify-content-end my-3">
                      <img src={email} width="30px" height="30px" className="mx-3" />
-                  <h4>servimahz@hotmail.com</h4>
+                  <h4 className="contact-info">servimahz@hotmail.com</h4>
                 </div>
                   <div className="d-flex align-items-center justify-content-end my-3">
                 <img src={facebook} width="30px" height="30px" className="mx-3" />
-                  <h4>@servimaz</h4>
+                  <h4 className="contact-info">@servimaz</h4>
                     </div>
               </div>
 

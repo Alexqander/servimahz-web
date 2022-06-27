@@ -1,0 +1,28 @@
+:root {
+    --AzulPrincipal: #2ECEF2;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+}
+
+.card-servi {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 350px;
+    padding: 1.8em;
+    border-radius: 22px;
+    background: #e2e3e4;
+    box-shadow: 38px 38px 89px #c7c8c9,
+        -38px -38px 89px #fdfeff;
+}
+
+.boton-card {
+    border: none;
+    border-radius: 5px;
+    font-family: var(--FuentePrincipal);
+    font-size: 20px;
+    background-color: var(--AzulPrincipal);
+    color: #F5F5F5;
+    width: 100%;
+
+}
