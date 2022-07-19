@@ -1,5 +1,5 @@
 :root {
-    --AzulPrincipal: #2ECEF2;
+    --AzulPrincipal: #2F3656;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
 }
@@ -30,4 +30,36 @@
     margin-left: 2.0em;
     margin-top: 1em;
     padding-right: 5em;
+}
+
+.carrusel {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3.8em;
+    padding-bottom: 3.8em;
+    overflow: hidden
+}
+
+.slide-padre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.slide-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-marca {
+    width: auto;
+    height: 70%;
+}
+
+.titulo-marca {
+    font-family: var(--FuentePrincipal);
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
 }

@@ -14,7 +14,10 @@ export const Nosotros = () => {
                   a un precio justo.
               </h4>
               <h4>
-                  Contamos con más de 20 años de experiencia en el sector por lo cual ofrecemos
+                  Contamos con más de 20 años de experiencia en el sector por lo cual le brindamos la mas alta calidad en cuanto a servicio se refiere.
+              </h4>
+              <h4>
+                  Contactanos y cotiza.
               </h4>
       </div>
       </>

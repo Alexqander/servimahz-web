@@ -1,7 +1,7 @@
 :root {
-  --AzulPrincipal: #2ECEF2;
-  --BgMain: #F5F5F5;
-  --FuentePrincipal: 'Montserrat', sans-serif;
+  --AzulPrincipal: #2f3656;
+  --BgMain: #f5f5f5;
+  --FuentePrincipal: "Montserrat", sans-serif;
 }
 
 body {
@@ -22,9 +22,18 @@ body {
   text-decoration: none;
 }
 
+.iniciarSesi {
+  font-family: var(--FuentePrincipal);
+  font-size: 18px;
+  color: var(--AzulPrincipal);
+  background-color: var(--BgMain);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 .enlace {
   font-family: var(--FuentePrincipal);
-  font-size: 20px;
+  font-size: 18px;
   color: #ffff;
   font-style: inherit;
   text-decoration: none;
@@ -57,15 +66,19 @@ body {
   padding: 0;
 }
 
-
 .lavadora {
+
   width: 100%;
   height: auto;
-  padding: 0;
+  padding: 1.8em;
 }
 
 .btn-contacto {
-  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+  background-image: linear-gradient(to right,
+      #4b6cb7 0%,
+      #182848 51%,
+      #4b6cb7 100%);
+  text-decoration: none;
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
@@ -81,7 +94,6 @@ body {
 
 .btn-contacto:hover {
   background-position: right center;
-  transition: 0.5s;
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
@@ -95,10 +107,15 @@ body {
   background-color: white;
   display: block;
   text-align: center;
+  text-decoration: none;
 }
 
 .btn-grad {
-  background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
+  background-image: linear-gradient(to right,
+      #757f9a 0%,
+      #d7dde8 51%,
+      #757f9a 100%);
+  text-decoration: none;
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
@@ -117,4 +134,45 @@ body {
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.informacion {
+  margin-left: 1em;
+  height: auto;
+  font-family: var(--FuentePrincipal);
+  font-weight: 500;
+}
+
+.informacion>h4 {
+  font-family: var(--FuentePrincipal);
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.formulario-contacto {
+  background-color: var(--AzulPrincipal);
+  color: var(--BgMain);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.formulario-contacto>h4 {
+  font-family: var(--FuentePrincipal);
+  color: var(--BgMain);
+  margin-left: 1.5em;
+}
+
+.formulario-contacto>span {
+  font-family: var(--FuentePrincipal);
+  color: var(--BgMain);
+  margin-left: 2.5em;
+}
+
+.formulario-contacto>button {
+  font-family: var(--FuentePrincipal);
+  color: var(--BgMain);
 }

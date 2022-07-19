@@ -1,28 +1,32 @@
 import { FooterServi } from '../components/FooterServi'
 import { NavServi } from '../components/NavServi'
+import { Contacto } from './Contacto'
 import { Nosotros } from './Nosotros'
 import { Servicios } from './Servicios'
+import refri from '../assets/img/refri.jpeg'
+import { Marcas } from './Marcas'
+
 export const HomePage = () => {
   return (
     <>
       <NavServi></NavServi>
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-5 titulo my-5 px-5">
+        <div className="row py-4">
+          <div className="col-5 titulo my-5 px-5 py-5">
             <h2>¿TU LAVADORA Ó REFRIGERADOR ESTAN FALLANDO?</h2>
             <h5>En servimahz te brindamos el mejor servicio de reparacion y mantenimiento para tus electrodomesticos. </h5>
             <div className="botones d-flex justify-content-start">
-              <button className="btn-contacto">
+              <a href="#" className="btn-contacto">
                 Conocenos
-              </button>
-              <button className="btn-grad">
+              </a>
+              <a href="#" className="btn-grad">
                 Contactanos
-              </button>
+              </a>
             </div>
           </div>
           <div className="col-7 px-0">
-            <div className="cajaImg d-flex">
-              <img src="https://i.imgur.com/0Zphs9N.jpg" className="lavadora"/>
+            <div className="cajaImg d-flex py-5">
+              <img src={refri} className="lavadora"/>
             </div>
           </div>
         </div>
@@ -30,7 +34,11 @@ export const HomePage = () => {
           <Nosotros />
         </div>
         <div className="row my-5">
-          <Servicios/>
+          <Servicios />
+          <Marcas/>
+        </div>
+        <div className="row my-5">
+            <Contacto/>
         </div>
           <FooterServi/>
         </div>

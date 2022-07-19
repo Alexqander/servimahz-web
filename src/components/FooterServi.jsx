@@ -30,7 +30,7 @@ export const FooterServi = () => {
                     </div>
                   <div className="d-flex align-items-center justify-content-end my-3">
                      <img src={email} width="30px" height="30px" className="mx-3" />
-                  <h4 className="contact-info">servimahz@hotmail.com</h4>
+                  <h4 className="contact-info">contacto@servimahz.com.mx</h4>
                 </div>
                   <div className="d-flex align-items-center justify-content-end my-3">
                 <img src={facebook} width="30px" height="30px" className="mx-3" />

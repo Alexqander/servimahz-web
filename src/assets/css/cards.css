@@ -1,5 +1,6 @@
 :root {
-    --AzulPrincipal: #2ECEF2;
+    --AzulPrincipal: #2F3656;
+    --AzulSecundario: #2964D9;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
 }
@@ -7,13 +8,47 @@
 .card-servi {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    height: 350px;
-    padding: 1.8em;
+    justify-content: space-between;
+    height: auto;
     border-radius: 22px;
     background: #e2e3e4;
-    box-shadow: 38px 38px 89px #c7c8c9,
-        -38px -38px 89px #fdfeff;
+    box-shadow: 30px 30px 70px #c7c8c9,
+        20px 10px 70px #fdfeff;
+}
+
+.cabezera {
+    background-color: var(--AzulPrincipal);
+    padding: 1.8em;
+    height: 100px;
+    width: 100%;
+    color: var(--BgMain);
+    font-family: var(--FuentePrincipal);
+    border-radius: 10px;
+}
+
+.cabezera>h5 {
+    font-family: var(--FuentePrincipal);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.cuerpo {
+    padding: 1.8em;
+    height: 90%;
+    font-family: var(--FuentePrincipal);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--AzulPrincipal);
+
+}
+
+.pie {
+
+    align-content: flex-end;
+}
+
+.cabezera>h5 {
+    font-family: var(--FuentePrincipal);
 }
 
 .boton-card {
@@ -21,8 +56,34 @@
     border-radius: 5px;
     font-family: var(--FuentePrincipal);
     font-size: 20px;
-    background-color: var(--AzulPrincipal);
+    background-color: var(--AzulSecundario);
     color: #F5F5F5;
     width: 100%;
+    height: 2.8em;
 
+
+}
+
+.imagen {
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+}
+
+.cajaimg {
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2.5em;
+}
+
+.tit-seccion {
+    padding: 1.5em;
+    background-color: var(--AzulPrincipal);
+    color: var(--BgMain);
+}
+
+.tit-seccion>h3 {
+    font-family: var(--FuentePrincipal);
+    font-weight: 600;
 }
