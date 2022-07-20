@@ -49,29 +49,54 @@ body {
 .titulo>h2 {
   font-family: var(--FuentePrincipal);
   font-weight: 600;
-  font-size: 50px;
+  font-size: 2.8em;
   margin-top: 2em;
   margin-bottom: 1em;
 }
 
 .titulo>h5 {
   font-family: var(--FuentePrincipal);
-  font-size: 25px;
+  font-size: 1.5em;
   font-weight: 500;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-.cajaImg {
-  padding: 0;
-}
+
+
 
 .lavadora {
-
   width: 100%;
   height: auto;
   padding: 1.8em;
 }
+
+
+@media (max-width: 960px) {
+  .lavadora {
+    padding: 1.5em;
+  }
+
+  .titulo>h2 {
+    font-size: 2em;
+  }
+
+  .titulo>h5 {
+    font-size: 1.3em;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+
+  .lavadora {
+    display: none;
+  }
+
+}
+
+@media(min-width:540px) {}
 
 .btn-contacto {
   background-image: linear-gradient(to right,
@@ -79,9 +104,8 @@ body {
       #182848 51%,
       #4b6cb7 100%);
   text-decoration: none;
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
@@ -89,7 +113,8 @@ body {
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   border: none;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-contacto:hover {
@@ -116,9 +141,8 @@ body {
       #d7dde8 51%,
       #757f9a 100%);
   text-decoration: none;
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
@@ -126,7 +150,8 @@ body {
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   border: none;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-grad:hover {

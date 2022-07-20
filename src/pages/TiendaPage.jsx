@@ -1,6 +1,3 @@
-
 export const TiendaPage = () => {
-  return (
-    <div>TiendaPage</div>
-  )
+	return <div>TiendaPage</div>
 }

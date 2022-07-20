@@ -5,12 +5,11 @@
 }
 
 .sec-nosotros {
-    height: 1000px;
+    width: 100%;
     background-image: url('../img/servifon.jpg');
-    background-size: cover;
     background-position: center;
     color: #F5F5F5;
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(52, 52, 52);
     background-blend-mode: soft-light;
 }
@@ -31,6 +30,34 @@
     margin-top: 1em;
     padding-right: 5em;
 }
+
+@media (max-width: 960px) {
+    .sec-nosotros>h3 {
+
+        font-size: 2.0em;
+
+    }
+
+    .sec-nosotros>h4 {
+        font-size: 1.3em;
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sec-nosotros>h3 {
+
+        font-size: 2.0em;
+
+    }
+
+    .sec-nosotros>h4 {
+        font-size: 1.3em;
+
+    }
+}
+
 
 .carrusel {
     display: flex;
@@ -53,7 +80,7 @@
 
 .img-marca {
     width: auto;
-    height: 70%;
+    height: 60%;
 }
 
 .titulo-marca {

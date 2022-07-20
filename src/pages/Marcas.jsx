@@ -20,12 +20,10 @@ export const Marcas = () => {
   const slideshow = useRef(null)
 
   const siguiente = () => {
-    console.log(slideshow.current)
     if (slideshow.current.children.length > 0) {
-      console.log('siguiente')
       const primerElemento = slideshow.current.children[0]
       // eslint-disable-next-line quotes
-      slideshow.current.style.transition = `7000ms ease-out all`
+      slideshow.current.style.transition = `5000ms ease-out all`
 
       const tamañoSlide = slideshow.current.children[0].offsetWidth
       // eslint-disable-next-line quotes
@@ -46,7 +44,7 @@ export const Marcas = () => {
   useEffect(() => {
     setInterval(() => {
       siguiente()
-    }, 100)
+    }, 2000)
   }, [])
 
   return (
