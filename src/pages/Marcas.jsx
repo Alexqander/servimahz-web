@@ -13,72 +13,39 @@ import secop from '../assets/img/secop.png'
 import presto from '../assets/img/presto.png'
 import quimobasicos from '../assets/img/quimobasicos.png'
 import tfal from '../assets/img/tfal.png'
-
-import { useRef, useEffect } from 'react'
+import { Carrusel } from '../components/Carrusel'
+import { Cabezera } from '../components/Cabezera'
 
 export const Marcas = () => {
-  const slideshow = useRef(null)
+	const marcas = [
+		{ source: mabe, title: '', description: '' },
+		{ source: whp, title: '', description: '' },
+		{ source: samsung, title: '', description: '' },
+		{ source: lg, title: '', description: '' },
+		{ source: electrolux, title: '', description: '' },
+		{ source: embraco, title: '', description: '' },
+		{ source: maytag, title: '', description: '' },
+		{ source: secop, title: '', description: '' },
+		{ source: quimobasicos, title: '', description: '' },
+		{ source: oster, title: '', description: '' },
+		{ source: hb, title: '', description: '' },
+		{ source: ecko, title: '', description: '' },
+		{ source: presto, title: '', description: '' },
+		{ source: tfal, title: '', description: '' },
+		{ source: gb, title: '', description: '' },
+	]
 
-  const siguiente = () => {
-    if (slideshow.current.children.length > 0) {
-      const primerElemento = slideshow.current.children[0]
-      // eslint-disable-next-line quotes
-      slideshow.current.style.transition = `5000ms ease-out all`
-
-      const tamañoSlide = slideshow.current.children[0].offsetWidth
-      // eslint-disable-next-line quotes
-      slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
-
-      const transicion = () => {
-        // eslint-disable-next-line quotes
-        slideshow.current.style.transition = `none`
-        // eslint-disable-next-line quotes
-        slideshow.current.style.transform = `translateX(0)`
-        slideshow.current.appendChild(primerElemento)
-      }
-
-      slideshow.current.addEventListener('transitionend', transicion)
-    }
-  }
-
-  useEffect(() => {
-    setInterval(() => {
-      siguiente()
-    }, 2000)
-  }, [])
-
-  return (
-      <>
-          <div className="row my-5 px-5">
-              <h3 className="titulo-marca">Contamos con las mejores marcas</h3>
-              <div className="carrusel">
-                  <div className="slide-padre" ref={slideshow}>
-                      <div className="slide-item">
-                      <img src={mabe} alt="" className="img-marca" />
-                      <img src={whp} alt="" className="img-marca" />
-                      <img src={samsung} alt="" className="img-marca" />
-                      <img src={lg} alt="" className="img-marca" />
-                      </div>
-                      <div className="slide-item">
-                      <img src={electrolux} alt="" className="img-marca" />
-                      <img src={maytag} alt="" className="img-marca" />
-                      <img src={embraco} alt="" className="img-marca" />
-                      <img src={secop} alt="" className="img-marca" />
-                      </div>
-                      <div className="slide-item">
-                      <img src={oster} alt="" className="img-marca" />
-                      <img src={hb} alt="" className="img-marca" />
-                      <img src={ecko} alt="" className="img-marca" />
-                      <img src={presto} alt="" className="img-marca" />
-                      </div>
-                      <div className="slide-item">
-                      <img src={tfal} alt="" className="img-marca" />
-                      <img src={gb} alt="" className="img-marca" />
-                      <img src={quimobasicos} alt="" className="img-marca" />
-                      </div>
-                  </div>
-              </div>
-      </div>
-      </>
-  )
+	const size = { width: '100%', height: 'auto' }
+	return (
+		<>
+			<Cabezera titulo={'Encuentra las mejores marcas'} doble={true} />
+			<Carrusel
+				images={marcas}
+				buttons={false}
+				size={size}
+				automatic={true}
+				info={false}
+			/>
+		</>
+	)
 }

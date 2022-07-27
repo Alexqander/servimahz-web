@@ -3,46 +3,54 @@ import { NavServi } from '../components/NavServi'
 import { Contacto } from './Contacto'
 import { Nosotros } from './Nosotros'
 import { Servicios } from './Servicios'
-import refri from '../assets/img/refri.jpeg'
 import { Marcas } from './Marcas'
+import { WhathsappButton } from '../components/botones/WhathsappButton'
+import { ButtonServi } from '../components/botones/ButtonServi'
 
 export const HomePage = () => {
 	return (
 		<>
 			<NavServi></NavServi>
 			<div className='container-fluid'>
-				<div className='row py-4'>
-					<div className='col-md-5 titulo d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center d-md-flex flex-md-column justify-content-md-center py-sm-5 px-4'>
-						<h2>¿TU LAVADORA Ó REFRIGERADOR ESTAN FALLANDO?</h2>
+				<WhathsappButton
+					message='Hola me podrias proporcionar mas informacion de tus servicios'
+					number={527774576803}
+				/>
+				<div className='row pt-4 seccInicio' id='seccInicio'>
+					<div className='caja-inicio col-md-6 titulo d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center d-md-flex flex-md-column justify-content-md-center py-sm-5 px-5'>
+						<h2>¿TU REFRIGERADOR O LAVADORA ESTAN FALLANDO?</h2>
 						<h5>
-							En servimahz te brindamos el mejor servicio de reparacion y
-							mantenimiento para tus electrodomesticos.{' '}
+							En Servimahz te brindamos el mejor servicio de reparacion,
+							mantenimiento y venta de refacciones para tus electrodomesticos.
 						</h5>
 						<div className='row botones' style={{ width: '100%' }}>
 							<div className='col-12 col-md-6 my-2 my-md-0'>
-								<a href='#' className='btn-contacto'>
-									Conocenos
-								</a>
+								<ButtonServi
+									isLink={true}
+									message='Conocenos'
+									design='boton-1'
+									reference='#seccNosotros'
+								/>
 							</div>
 							<div className='col-12 col-md-6 my-2 my-md-0'>
-								<a href='#' className='btn-grad '>
-									Contactanos
-								</a>
+								<ButtonServi
+									isLink={true}
+									message='Llamanos'
+									design='boton-2'
+									reference='tel:7773210948'
+								/>
 							</div>
 						</div>
 					</div>
-					<div className='col-md-7 px-0 py-md-5 d-flex align-items-center '>
-						<img src={refri} className='lavadora' />
-					</div>
 				</div>
-				<div className='row my-5 my-lg-1'>
+				<div className='row my-5 my-lg-1' id='seccNosotros'>
 					<Nosotros />
 				</div>
-				<div className='my-5'>
+				<div className='my-5 ' id='seccServicios'>
 					<Servicios />
 					<Marcas />
 				</div>
-				<div className='my-5'>
+				<div className='my-5' id='seccContacto'>
 					<Contacto />
 				</div>
 				<FooterServi />

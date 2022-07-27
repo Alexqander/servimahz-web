@@ -2,10 +2,18 @@
     --AzulPrincipal: #2F3656;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
+    --Fondo: #141E30;
+    --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
+    --Gradiente: linear-gradient(to right, #243B55, #141E30);
 }
 
 footer {
-    background-color: var(--AzulPrincipal);
+    background: var(--Fondo);
+    /* fallback for old browsers */
+    background: var(--FondoDeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--Gradiente);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: auto;
     color: white;
     font-family: var(--FuentePrincipal);
@@ -32,4 +40,7 @@ footer {
 
 .contact-info {
     font-size: 18px;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
 }

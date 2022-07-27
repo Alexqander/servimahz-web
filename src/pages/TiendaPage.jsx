@@ -1,3 +1,12 @@
+import { FooterServi } from '../components/FooterServi'
+import { NavServi } from '../components/NavServi'
+
 export const TiendaPage = () => {
-	return <div>TiendaPage</div>
+	return (
+		<>
+			<NavServi />
+			<div className='container'></div>
+			<FooterServi />
+		</>
+	)
 }

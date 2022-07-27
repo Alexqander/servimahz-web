@@ -1,11 +1,10 @@
-import { Form, Button } from 'react-bootstrap'
+import { Cabezera } from '../components/Cabezera'
+import { ContacForm } from '../components/formularios/ContacForm'
 
 export const Contacto = () => {
 	return (
 		<>
-			<div className='tit-seccion'>
-				<h3>Contacto</h3>
-			</div>
+			<Cabezera titulo={'Contacto'} />
 			<div className='row'>
 				<div className='col-12 col-lg-4 px-4 py-2'>
 					<div className='informacion px-3'>
@@ -35,37 +34,7 @@ export const Contacto = () => {
 				<div className='col-12 col-lg-7 my-4 py-5 formulario-contacto'>
 					<h4>Contactanos</h4>
 					<span>Solicita una cotizacion o servicio</span>
-					<Form className='row px-5 py-5'>
-						<Form.Group className='mb-3 col-12 col-lg-6'>
-							<Form.Label>Nombre</Form.Label>
-							<Form.Control type='text' placeholder='tu nombre' />
-						</Form.Group>
-						<Form.Group className='mb-3 col-12 col-lg-6'>
-							<Form.Label>Telefono</Form.Label>
-							<Form.Control type='tel' placeholder='+5277' />
-						</Form.Group>
-						<Form.Group className='mb-3 col-12 col-lg-6'>
-							<Form.Label>Email</Form.Label>
-							<Form.Control type='email' placeholder='email@example.com' />
-						</Form.Group>
-						<Form.Group className='mb-3 col-12 col-lg-6'>
-							<Form.Label>Asunto</Form.Label>
-							<Form.Select aria-label='selecciona un asunto'>
-								<option>selecciona un asunto</option>
-								<option value='1'>Cotizacion</option>
-								<option value='2'>Servicio</option>
-							</Form.Select>
-						</Form.Group>
-						<Form.Group className='mb-3 col-12'>
-							<Form.Label>Mensaje</Form.Label>
-							<Form.Control as='textarea'></Form.Control>
-						</Form.Group>
-						<Form.Group className='mb-3'>
-							<Button variant='primary' type='submit' className='col-12 py-3'>
-								Enviar
-							</Button>
-						</Form.Group>
-					</Form>
+					<ContacForm />
 				</div>
 				<div className='row px-0 mx-0'>
 					<div className='col-12'>

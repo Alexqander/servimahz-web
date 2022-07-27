@@ -2,6 +2,10 @@
   --AzulPrincipal: #2f3656;
   --BgMain: #f5f5f5;
   --FuentePrincipal: "Montserrat", sans-serif;
+  --AzulGradient: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  --Fondo: #141E30;
+  --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
+  --Gradiente: linear-gradient(to right, #243B55, #141E30);
 }
 
 body {
@@ -9,7 +13,12 @@ body {
 }
 
 .navPrincipal {
-  background-color: var(--AzulPrincipal);
+  background: var(--Fondo);
+  /* fallback for old browsers */
+  background: var(--FondoDeg);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: var(--Gradiente);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
@@ -17,7 +26,7 @@ body {
 
 .marca {
   font-family: var(--FuentePrincipal);
-  font-size: 35px;
+
   color: #ffff;
   text-decoration: none;
 }
@@ -33,12 +42,25 @@ body {
 
 .enlace {
   font-family: var(--FuentePrincipal);
-  font-size: 18px;
+  font-size: 15px;
   color: #ffff;
   font-style: inherit;
   text-decoration: none;
   margin-top: 10px;
+  display: block;
 }
+
+.caja-links {
+  display: flex;
+}
+
+@media (max-width: 860px) {
+  .caja-links {
+    display: none;
+  }
+}
+
+
 
 .navbar-nav {
   display: flex;
@@ -110,8 +132,8 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(19, 19, 19);
+  border-radius: 45px;
   border: none;
   display: flex;
   justify-content: center;
@@ -147,9 +169,9 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(19, 19, 19);
   border: none;
+  border-radius: 45px;
   display: flex;
   justify-content: center;
 }
@@ -176,7 +198,12 @@ body {
 }
 
 .formulario-contacto {
-  background-color: var(--AzulPrincipal);
+  background: var(--Fondo);
+  /* fallback for old browsers */
+  background: var(--FondoDeg);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: var(--Gradiente);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: var(--BgMain);
   display: flex;
   flex-direction: column;
