@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
-
-import '../../assets/css/Button.css'
-import { CheckIcon } from '../../assets/img/CheckIcon'
+import styles from '../../assets/css/buttonServi.module.css'
+import { CheckIcon } from '../../assets/img/svg/CheckIcon'
 export const ButtonServi = ({
 	design,
 	isLink,
@@ -23,8 +22,12 @@ export const ButtonServi = ({
 				<>
 					{isLoading ? (
 						<>
-							<button className='boton-4' onClick={accion} type={formulario}>
-								<div className='loader'></div>
+							<button
+								className={styles.boton4}
+								onClick={accion}
+								type={formulario}
+							>
+								<div className={styles.loader}></div>
 								Enviando
 							</button>
 						</>

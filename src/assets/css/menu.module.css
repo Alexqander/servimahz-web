@@ -1,0 +1,106 @@
+:root {
+    --AzulPrincipal: #2F3656;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+    --AzulHover: #314396;
+    --Fondo: #141E30;
+    --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
+    --Gradiente: linear-gradient(to right, #243B55, #141E30);
+}
+
+.menuResponsive {
+    background: var(--Fondo);
+    background: var(--FondoDeg);
+    background: var(--Gradiente);
+    color: var(--BgMain);
+    font-family: var(--FuentePrincipal);
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .menuResponsive {
+        position: fixed;
+        left: 93%;
+        top: 1em;
+        display: block;
+    }
+
+    .menu {
+        transition: all 1.3s;
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menuResponsive {
+        position: fixed;
+        left: 91%;
+        top: 1em;
+        display: block;
+    }
+
+    .menu {
+        transition: all 1.3s;
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+    }
+}
+
+@media (max-width:576px) {
+    .menuResponsive {
+        position: fixed;
+        left: 85%;
+        top: 1em;
+        display: block;
+    }
+
+    .menu {
+        transition: all 1.3s;
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+    }
+}
+
+
+.menu {
+    transition: all 1.5s;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 65px;
+    height: 100vh;
+    background: var(--Fondo);
+    background: var(--FondoDeg);
+    background: var(--Gradiente);
+}
+
+.menuItems {
+    background: var(--Fondo);
+    background: var(--FondoDeg);
+    background: var(--Gradiente);
+    padding: 1em 0.2em 1em 0.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+    text-decoration: none;
+    color: var(--BgMain);
+    font-family: var(--FuentePrincipal);
+    transition: all 0.8s;
+}
+
+.btnMenu {
+    border: none;
+    background: var(--Fondo);
+    background: var(--FondoDeg);
+    background: var(--Gradiente);
+    color: var(--BgMain);
+}

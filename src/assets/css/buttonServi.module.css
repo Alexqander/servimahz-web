@@ -1,0 +1,91 @@
+:root {
+    --AzulPrincipal: #2F3656;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+    --Verde: #04bf8a;
+}
+
+.boton1 {
+    font-family: var(--FuentePrincipal);
+    background-color: #146CFD;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--BgMain);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.boton1:hover {
+    font-family: var(--FuentePrincipal);
+    background-color: #0751c7;
+    color: var(--BgMain);
+    transition: all 0.3s ease;
+
+}
+
+.boton2 {
+    background-color: #002664;
+    font-family: var(--FuentePrincipal);
+    color: var(--BgMain);
+    text-decoration: none;
+    border-radius: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton2:hover {
+    font-family: var(--FuentePrincipal);
+    background-color: #0e3779;
+    color: var(--BgMain);
+    transition: all 0.3s ease;
+}
+
+.boton3 {
+    font-family: var(--FuentePrincipal);
+    color: var(--BgMain);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton4 {
+    font-family: var(--FuentePrincipal);
+    background-color: var(--Verde);
+    color: var(--BgMain);
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #ebecf1c6;
+    border-top-color: #0ef2a2;
+    animation: spin013151 1s linear infinite;
+    border-radius: 100%;
+    margin-right: 0.5em;
+}
+
+@keyframes spin013151 {
+    to {
+        transform: rotate(360deg);
+    }
+}
