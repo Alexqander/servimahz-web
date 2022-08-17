@@ -5,7 +5,7 @@ import { Nosotros } from './secciones/Nosotros'
 import { Servicios } from './secciones/Servicios'
 import { Marcas } from './secciones/Marcas'
 import { WhathsappButton } from '../components/botones/WhathsappButton'
-import { Inicio } from './secciones/inicio'
+import { Inicio } from './secciones/Inicio'
 
 export const HomePage = () => {
 	return (
