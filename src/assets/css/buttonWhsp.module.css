@@ -1,0 +1,49 @@
+:root {
+    --AzulPrincipal: #2F3656;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+    --Verde: #04bf8a;
+}
+
+.cajaWhatsapp {
+    position: fixed;
+    top: 88%;
+    left: 1%;
+    color: var(--BgMain);
+    background-color: var(--Verde);
+    padding: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+
+}
+
+.caja-whatsapp:hover {
+    background-color: rgba(10, 154, 113, 0.871);
+}
+
+@media (max-width: 960px) {
+
+    .caja-whatsapp {
+        position: fixed;
+        top: 90%;
+        left: 85%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .caja-whatsapp {
+        position: fixed;
+        top: 90%;
+        left: 83%;
+    }
+}
+
+@media (max-width: 650px) {
+    .caja-whatsapp {
+        position: fixed;
+        top: 85%;
+        left: 75%;
+    }
+}

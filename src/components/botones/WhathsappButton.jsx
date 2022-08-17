@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import '../../assets/css/Button.css'
+import styles from '../../assets/css/buttonWhsp.module.css'
 
 export const WhathsappButton = ({ active, message, number }) => {
 	const urlconfig = `https://wa.me/${number}/?text=${message}`
@@ -11,7 +11,7 @@ export const WhathsappButton = ({ active, message, number }) => {
 				href={urlconfig}
 				target='_blank'
 				rel='noreferrer'
-				className='caja-whatsapp'
+				className={styles.cajaWhatsapp}
 			>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'

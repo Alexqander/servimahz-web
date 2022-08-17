@@ -1,0 +1,41 @@
+:root {
+    --AzulPrincipal: #2F3656;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+    --AzulHover: #314396;
+    --Fondo: #141E30;
+    --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
+    --Gradiente: linear-gradient(to right, #243B55, #141E30);
+}
+
+.carrusel {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3.8em;
+    padding-bottom: 3.8em;
+    overflow: hidden
+}
+
+.slidePadre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.slideItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgMarca {
+    width: auto;
+    height: auto;
+}
+
+.tituloMarca {
+    font-family: var(--FuentePrincipal);
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+}

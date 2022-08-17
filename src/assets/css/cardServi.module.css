@@ -1,0 +1,86 @@
+:root {
+    --AzulPrincipal: #2F3656;
+    --AzulSecundario: #2964D9;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+    --Fondo: #141E30;
+    --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
+    --Gradiente: linear-gradient(to right, #243B55, #141E30);
+}
+
+.cardServi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    border-radius: 22px;
+    background: #e2e3e4;
+    box-shadow: 30px 30px 70px #c7c8c9,
+        20px 10px 70px #fdfeff;
+}
+
+.cabezera {
+    background: var(--Fondo);
+    /* fallback for old browsers */
+    background: var(--FondoDeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--Gradiente);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1.8em;
+    height: 100px;
+    width: 100%;
+    color: var(--BgMain);
+    font-family: var(--FuentePrincipal);
+    border-radius: 10px;
+}
+
+.cabezera>h5 {
+    font-family: var(--FuentePrincipal);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.cuerpo {
+    padding: 1.8em;
+    height: 90%;
+    font-family: var(--FuentePrincipal);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--AzulPrincipal);
+
+}
+
+.pie {
+
+    align-content: flex-end;
+}
+
+.cabezera>h5 {
+    font-family: var(--FuentePrincipal);
+}
+
+.botonCard {
+    border: none;
+    border-radius: 5px;
+    font-family: var(--FuentePrincipal);
+    font-size: 20px;
+    background-color: var(--AzulSecundario);
+    color: #F5F5F5;
+    width: 100%;
+    height: 2.8em;
+
+
+}
+
+.imagen {
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+}
+
+.cajaImg {
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2.5em;
+}

@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types'
+import styles from '../assets/css/cabezera.module.css'
 
 export const Cabezera = ({ titulo, doble }) => {
 	return (
 		<>
 			{doble ? (
-				<div className='tit-seccion'>
-					<div className='lineas'></div>
+				<div className={styles.titSeccionDoble}>
+					<div className={styles.lineasDoble}></div>
 					<h3 className='mx-3'>{titulo}</h3>
-					<div className='lineas'></div>
+					<div className={styles.lineasDoble}></div>
 				</div>
 			) : (
 				<>
-					<div className='tit-seccion'>
-						<div className='lineas'></div>
+					<div className={styles.titSeccion}>
+						<div className={styles.lineas}></div>
 						<h3 className='mx-3'>{titulo}</h3>
-						<div className='lineas'></div>
+						<div className={styles.lineas}></div>
 					</div>
 				</>
 			)}

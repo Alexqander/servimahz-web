@@ -1,56 +1,22 @@
 import PropTypes from 'prop-types'
-import { useRef, useEffect } from 'react'
+import styles from '../assets/css/carrusel.module.css'
+import useCarrusel from '../hooks/useCarrusel'
 
 export const Carrusel = ({ images, buttons, size, automatic, info }) => {
-	const slideshow = useRef(null)
-
-	const siguiente = () => {
-		if (slideshow.current.children.length > 0) {
-			const primerElemento = slideshow.current.children[0]
-			// eslint-disable-next-line quotes
-			slideshow.current.style.transition = `5000ms ease-out all`
-
-			const tamañoSlide = slideshow.current.children[0].offsetWidth
-			// eslint-disable-next-line quotes
-			slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
-
-			const transicion = () => {
-				// eslint-disable-next-line quotes
-				slideshow.current.style.transition = `none`
-				// eslint-disable-next-line quotes
-				slideshow.current.style.transform = `translateX(0)`
-				slideshow.current.appendChild(primerElemento)
-			}
-
-			slideshow.current.addEventListener('transitionend', transicion)
-		}
-	}
-
-	const atras = () => {}
-
-	automatic
-		? useEffect(() => {
-				setInterval(() => {
-					siguiente()
-				}, 3000)
-		  }, [])
-		: useEffect(() => {
-				siguiente()
-		  }, [])
-
+	const { siguiente, atras, slideshow } = useCarrusel(automatic)
 	return (
 		<>
 			<div className='row'>
 				<div
-					className='carrusel'
+					className={styles.carrusel}
 					style={{ width: size.width, height: size.height }}
 				>
-					<div className='slide-padre' ref={slideshow}>
+					<div className={styles.slidePadre} ref={slideshow}>
 						{images.map((image, i) => {
 							return (
 								<>
-									<div className='slide-item' key={i}>
-										<img src={image.source} alt='' className='img-marca' />
+									<div className={styles.slideItem} key={`im--${i}`}>
+										<img src={image.source} className={styles.imgMarca} />
 										{info ? (
 											<>
 												<div className='info-item'>

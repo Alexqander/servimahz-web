@@ -1,6 +1,7 @@
 import { Container, Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { Menu } from './Menu'
+import styles from '../assets/css/navServi.module.css'
 
 export const NavServi = () => {
 	const links = [
@@ -8,38 +9,34 @@ export const NavServi = () => {
 		{ name: 'Nosotros', reference: '#seccNosotros' },
 		{ name: 'Servicios', reference: '#seccServicios' },
 		{ name: 'Contacto', reference: '#seccContacto' },
-		{ name: 'Tienda', reference: '/Tienda' },
 	]
 
 	return (
 		<>
 			<Navbar
-				className='navBackground p-0 navPrincipal'
+				className={`p-0 ${styles.navPrincipal}`}
 				variant='light'
 				style={{ position: 'fixed' }}
 			>
 				<Container
 					fluid
-					className='d-flex justify-content-between align-items-center'
+					className='d-flex flex-row justify-content-between align-items-center'
 				>
 					<Navbar.Brand href='/home'>
-						<h4 className='marca'>sm</h4>
+						<h4 className={styles.marca}>sm</h4>
 					</Navbar.Brand>
 					<Nav>
-						<div className='caja-links'>
-							<Link className='enlace' to={'/home'}>
+						<div className={`pt-2 ${styles.cajaLinks}`}>
+							<Link className={styles.enlace} to={'/home'}>
 								<p className='mx-5'>Inicio</p>
 							</Link>
-							<a className='enlace' href='#seccNosotros'>
+							<a className={styles.enlace} href='#seccNosotros'>
 								<p className='mx-5'>Nosotros</p>
 							</a>
-							<a href='#seccServicios' className='enlace'>
+							<a href='#seccServicios' className={styles.enlace}>
 								<p className=' mx-5'>Servicios</p>
 							</a>
-							<Link className='enlace' to={'/Tienda'}>
-								<p className=' mx-5'>Tienda</p>
-							</Link>
-							<a href='#seccContacto' className='enlace'>
+							<a href='#seccContacto' className={styles.enlace}>
 								<p className=' mx-5'>Contacto</p>
 							</a>
 						</div>

@@ -1,0 +1,43 @@
+:root {
+    --AzulPrincipal: #2F3656;
+    --BgMain: #F5F5F5;
+    --FuentePrincipal: 'Montserrat', sans-serif;
+    --Fondo: #141E30;
+    --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
+    --Gradiente: linear-gradient(to right, #243B55, #141E30);
+}
+
+footer {
+    background: var(--Fondo);
+    background: var(--FondoDeg);
+    background: var(--Gradiente);
+    height: auto;
+    color: white;
+    font-family: var(--FuentePrincipal);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.cajaNom {
+    border-left: 1px solid white;
+    height: 80px;
+    width: min-content;
+}
+
+.marca {
+    font-size: 40px;
+}
+
+.descrip {
+    font-size: 20px;
+}
+
+.contactInfo {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
+}
