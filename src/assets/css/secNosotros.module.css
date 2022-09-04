@@ -2,22 +2,18 @@
     --AzulPrincipal: #2F3656;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
+    --FuenteSecundaria: 'Poppins', sans-serif;
     --AzulHover: #314396;
     --Fondo: #141E30;
     --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
-    --Gradiente: linear-gradient(to right, #243B55, #141E30);
+    --background: linear-gradient(270.07deg, #1E3C72 4.92%, #2A5298 92.28%);
 }
 
 .secNosotros {
     width: 100%;
-    background-image: url('../img/fondo/servifon.jpg');
-    background-size: cover;
-    height: 950px;
-    background-position: center;
-    color: #F5F5F5;
+    height: auto;
+    color: var(--background);
     padding: 20px;
-    background-color: rgb(52, 52, 52);
-    background-blend-mode: soft-light;
 }
 
 .secNosotros>h3 {
@@ -30,18 +26,16 @@
 }
 
 .secNosotros>h4 {
-    font-family: var(--FuentePrincipal);
-    font-size: 1.6em;
-    font-weight: 500;
+    font-family: var(--FuenteSecundaria);
+    font-weight: 100;
+    font-size: 1.2em;
     margin-left: 2.0em;
     margin-top: 1em;
-    padding-right: 5em;
+
 }
 
 @media (max-width: 960px) {
-    .secNosotros {
-        background-image: url('../img/fondo/servifon-min2.jpg')
-    }
+
 
     .secNosotros>h3 {
 
@@ -58,9 +52,6 @@
 
 @media (max-width: 768px) {
 
-    .secNosotros {
-        background-image: url('../img/fondo/servifon-min3.jpg')
-    }
 
     .secNosotros>h3 {
 

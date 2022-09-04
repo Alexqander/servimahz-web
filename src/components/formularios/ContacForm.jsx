@@ -11,7 +11,11 @@ export const ContacForm = () => {
 			<Form className='row px-5 py-5' ref={form} onSubmit={sendEmail}>
 				<Form.Group className='mb-3 col-12 col-lg-6'>
 					<Form.Label>Nombre</Form.Label>
-					<Form.Control type='text' placeholder='tu nombre' name='user_name' />
+					<Form.Control
+						type='text'
+						placeholder='ingresa un nombre'
+						name='user_name'
+					/>
 				</Form.Group>
 				<Form.Group className='mb-3 col-12 col-lg-6'>
 					<Form.Label>Telefono</Form.Label>

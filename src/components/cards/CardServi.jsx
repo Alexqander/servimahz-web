@@ -1,23 +1,54 @@
 import PropTypes from 'prop-types'
 import styles from '../../assets/css/cardServi.module.css'
-
-export const CardServi = ({ title, content, images, titButton }) => {
+import { ButtonServi } from '../botones/ButtonServi'
+import btnStyles from '../../assets/css/buttonServi.module.css'
+export const CardServi = ({
+	title,
+	content,
+	images,
+	titButton,
+	horizontal,
+}) => {
 	return (
 		<>
-			<div className={styles.cardServi}>
-				<div className={styles.cabezera}>
-					<h5>{title}</h5>
-				</div>
-				<div className={styles.cuerpo}>
-					<div className={styles.cajaImg}>
-						<img src={images} className={styles.imagen} />
+			{horizontal ? (
+				<>
+					<div className={`row ${styles.cardServiH}`}>
+						<div className={`col-12 col-lg-4 ${styles.tituloH}`}>{title}</div>
+						<div className={`col-12 col-lg-6 ${styles.imagenH}`}>
+							<img
+								src={images}
+								className={styles.imagen}
+								width={'auto'}
+								height={190}
+							/>
+						</div>
+						<div className={`col-12 col-lg-2 ${styles.botonH}`}>
+							<ButtonServi
+								isLink={true}
+								message={'Cotizacion'}
+								design={btnStyles.boton1}
+							/>
+						</div>
 					</div>
-					<p>{content}</p>
-				</div>
-				<div className={`${styles.pie} py-4 px-4`}>
-					<button className={styles.botonCard}>{titButton}</button>
-				</div>
-			</div>
+				</>
+			) : (
+				<>
+					<div className={styles.cardServi}>
+						<div className={styles.cuerpo}>
+							<img
+								src={images}
+								className={styles.imagen}
+								width={'auto'}
+								height={215}
+							/>
+						</div>
+						<div className={`${styles.pie} d-flex justify-content-center px-5`}>
+							<h5>{title}</h5>
+						</div>
+					</div>
+				</>
+			)}
 		</>
 	)
 }
@@ -27,4 +58,5 @@ CardServi.propTypes = {
 	content: PropTypes.string,
 	images: PropTypes.string,
 	titButton: PropTypes.string,
+	horizontal: PropTypes.bool,
 }
