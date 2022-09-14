@@ -5,16 +5,15 @@
     --AzulHover: #314396;
     --Fondo: #141E30;
     --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
-    --Gradiente: linear-gradient(to right, #243B55, #141E30);
+    --background: linear-gradient(270.07deg, #1E3C72 4.92%, #2A5298 92.28%);
 }
 
 .menuResponsive {
-    background: var(--Fondo);
-    background: var(--FondoDeg);
-    background: var(--Gradiente);
+    background: var(--background);
     color: var(--BgMain);
     font-family: var(--FuentePrincipal);
     display: none;
+    border: none;
 }
 
 @media (max-width: 860px) {
@@ -77,15 +76,11 @@
     position: fixed;
     top: 65px;
     height: 100vh;
-    background: var(--Fondo);
-    background: var(--FondoDeg);
-    background: var(--Gradiente);
+    background: var(--background);
 }
 
 .menuItems {
-    background: var(--Fondo);
-    background: var(--FondoDeg);
-    background: var(--Gradiente);
+    background: var(--background);
     padding: 1em 0.2em 1em 0.2em;
     display: flex;
     flex-direction: row;
@@ -99,8 +94,6 @@
 
 .btnMenu {
     border: none;
-    background: var(--Fondo);
-    background: var(--FondoDeg);
-    background: var(--Gradiente);
+    background: var(--background);
     color: var(--BgMain);
 }

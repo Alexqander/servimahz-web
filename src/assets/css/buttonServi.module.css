@@ -1,5 +1,7 @@
 :root {
     --AzulPrincipal: #2F3656;
+    --AzulSecundario: #234480;
+    --AzulBoton: #0A8CBF;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
     --Verde: #04bf8a;
@@ -7,13 +9,14 @@
 
 .boton1 {
     font-family: var(--FuentePrincipal);
-    background-color: #146CFD;
+    font-variant: normal;
+    background-color: white;
     text-decoration: none;
     border-radius: 10px;
-    border: none;
+    border: 2px solid var(--AzulSecundario);
     padding-top: 1em;
     padding-bottom: 1em;
-    color: var(--BgMain);
+    color: var(--AzulSecundario);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,15 +26,15 @@
 
 .boton1:hover {
     font-family: var(--FuentePrincipal);
-    background-color: #0751c7;
+    background-color: var(--AzulSecundario);
     color: var(--BgMain);
     transition: all 0.3s ease;
-
 }
 
 .boton2 {
-    background-color: #002664;
+    background-color: var(--AzulSecundario);
     font-family: var(--FuentePrincipal);
+    font-weight: 500;
     color: var(--BgMain);
     text-decoration: none;
     border-radius: 10px;
@@ -41,11 +44,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    border: none;
 }
 
 .boton2:hover {
     font-family: var(--FuentePrincipal);
-    background-color: #0e3779;
+    background-color: var(--AzulBoton);
     color: var(--BgMain);
     transition: all 0.3s ease;
 }

@@ -5,17 +5,13 @@ export const Cabezera = ({ titulo, doble }) => {
 	return (
 		<>
 			{doble ? (
-				<div className={styles.titSeccionDoble}>
-					<div className={styles.lineasDoble}></div>
+				<div className={` my-5 ${styles.titSeccionDoble}`}>
 					<h3 className='mx-3'>{titulo}</h3>
-					<div className={styles.lineasDoble}></div>
 				</div>
 			) : (
 				<>
-					<div className={styles.titSeccion}>
-						<div className={styles.lineas}></div>
+					<div className={` my-3 ${styles.titSeccion}`}>
 						<h3 className='mx-3'>{titulo}</h3>
-						<div className={styles.lineas}></div>
 					</div>
 				</>
 			)}

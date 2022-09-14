@@ -2,6 +2,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { Menu } from './Menu'
 import styles from '../assets/css/navServi.module.css'
+import logo from '../assets/img/logo.png'
 
 export const NavServi = () => {
 	const links = [
@@ -20,10 +21,10 @@ export const NavServi = () => {
 			>
 				<Container
 					fluid
-					className='d-flex flex-row justify-content-between align-items-center'
+					className='d-flex flex-row justify-content-between align-items-center py-3'
 				>
 					<Navbar.Brand href='/home'>
-						<h4 className={styles.marca}>sm</h4>
+						<img className={styles.logo} src={logo}></img>
 					</Navbar.Brand>
 					<Nav>
 						<div className={`pt-2 ${styles.cajaLinks}`}>

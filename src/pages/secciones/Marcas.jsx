@@ -94,7 +94,7 @@ export const Marcas = () => {
 		},
 	]
 
-	const size = { width: '100%', height: 'auto' }
+	const size = { width: '100%', height: '50%' }
 	return (
 		<>
 			<Cabezera titulo={'Encuentra las mejores marcas'} doble={true} />

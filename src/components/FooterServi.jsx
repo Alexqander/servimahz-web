@@ -3,18 +3,14 @@ import telefono from '../assets/img/img-contact/telefono.png'
 import whatsapp from '../assets/img/img-contact/whatsapp.png'
 import email from '../assets/img/img-contact/email.png'
 import facebook from '../assets/img/img-contact/facebook.png'
+import logo from '../assets/img/logo.png'
 
 export const FooterServi = () => {
 	return (
 		<>
 			<footer className='row px-3 px-md-5 py-5 '>
 				<div className='col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start '>
-					<h4 className={`mx-3 ${styles.marca}`}>sm</h4>
-					<div className={styles.cajaNom}>
-						<h5 className={`mx-3 ${styles.descrip}`}>
-							servicio de refrigeracion mahz
-						</h5>
-					</div>
+					<img src={logo} className={styles.logo} />
 				</div>
 				<div className='col-12 col-md-6 d-flex flex-column align-items-center  d-md-flex flex-md-column align-items-md-end py-5 py-md-0'>
 					<div className='d-flex align-items-center justify-content-end my-3'>

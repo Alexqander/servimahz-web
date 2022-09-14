@@ -2,27 +2,27 @@ import { useState } from 'react'
 import styles from '../assets/css/buttonServi.module.css'
 import emailjs from '@emailjs/browser'
 
-function useEmail(formRef) {
+function useEmail(inputs) {
 	const [enviado, setEnviando] = useState(false)
 	const [message, setMessage] = useState('Enviar')
-	const [design, setDesign] = useState(styles.boton1)
-	const sendEmail = (e) => {
-		e.preventDefault()
-
+	const [design, setDesign] = useState(styles.boton2)
+	const sendEmail = (inputs) => {
+		console.log('entre al envio del email')
 		setEnviando(true)
 
 		const reset = () => {
-			e.target.reset()
-			setDesign(styles.boton1)
+			setDesign(styles.boton2)
 			setMessage('Enviar')
 		}
 
 		const enviar = () => {
+			console.log('este es el contenido del formulario')
+			console.log(inputs)
 			emailjs
-				.sendForm(
+				.send(
 					import.meta.env.VITE_APP_SERVICE_ID,
 					import.meta.env.VITE_APP_TEMPLATE_ID,
-					formRef.current,
+					inputs,
 					import.meta.env.VITE_APP_USER_ID
 				)
 				.then(

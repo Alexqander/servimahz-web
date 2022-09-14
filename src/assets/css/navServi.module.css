@@ -2,16 +2,20 @@
     --AzulPrincipal: #2f3656;
     --BgMain: #f5f5f5;
     --FuentePrincipal: "Montserrat", sans-serif;
+    --FuenteSecundaria: 'Poppins', sans-serif;
     --AzulGradient: linear-gradient(to right, #243949 0%, #517fa4 100%);
     --Fondo: #141E30;
     --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
     --Gradiente: linear-gradient(to right, #243B55, #141E30);
+    --background: linear-gradient(270.07deg, #1E3C72 4.92%, #2A5298 92.28%);
 }
 
+
+
+
 .navPrincipal {
-    background: var(--Fondo);
-    background: var(--FondoDeg);
-    background: var(--Gradiente);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    background: var(--background);
     width: 100%;
 }
 
@@ -20,6 +24,11 @@
     color: #ffff;
     text-decoration: none;
     font-size: 1.7em;
+}
+
+.logo {
+    width: 177px;
+    height: auto;
 }
 
 .iniciarSesi {
@@ -32,7 +41,7 @@
 }
 
 .enlace {
-    font-family: var(--FuentePrincipal);
+    font-family: var(--FuenteSecundaria);
     font-size: 15px;
     color: #ffff;
     font-style: inherit;

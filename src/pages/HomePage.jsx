@@ -5,13 +5,14 @@ import { Nosotros } from './secciones/Nosotros'
 import { Servicios } from './secciones/Servicios'
 import { Marcas } from './secciones/Marcas'
 import { WhathsappButton } from '../components/botones/WhathsappButton'
-import { Inicio } from './secciones/Inicio'
+import { Inicio } from './secciones/inicio'
+import { Opiniones } from './secciones/Opiniones'
 
 export const HomePage = () => {
 	return (
 		<>
 			<NavServi></NavServi>
-			<div className='container-fluid'>
+			<div className='container'>
 				<WhathsappButton
 					message='Hola me podrias proporcionar mas informacion de tus servicios'
 					number={527774576803}
@@ -24,11 +25,14 @@ export const HomePage = () => {
 					<Servicios />
 					<Marcas />
 				</div>
+				<div className='my-5' id='seccOpiniones'>
+					<Opiniones />
+				</div>
 				<div className='my-5' id='seccContacto'>
 					<Contacto />
 				</div>
-				<FooterServi />
 			</div>
+			<FooterServi />
 		</>
 	)
 }

@@ -2,26 +2,34 @@
     --AzulPrincipal: #2F3656;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
+    --FuenteTitulos: 'Poppins', sans-serif;
     --AzulHover: #314396;
+    --ColorLetra: #22437E;
     --Fondo: #141E30;
     --FondoDeg: -webkit-linear-gradient(to right, #243B55, #141E30);
     --Gradiente: linear-gradient(to right, #243B55, #141E30);
 }
 
 .titulo>h2 {
-    font-family: var(--FuentePrincipal);
+    font-family: var(--FuenteTitulos);
     font-weight: 600;
     font-size: 2.8em;
     margin-top: 2em;
     margin-bottom: 1em;
+    color: var(--ColorLetra);
 }
 
 .titulo>h5 {
-    font-family: var(--FuentePrincipal);
-    font-size: 1.5em;
-    font-weight: 500;
+    font-family: var(--FuenteTitulos);
+    font-size: 1.3em;
+    font-weight: 100;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+.lavadoraImg {
+    width: auto;
+    height: 547px;
 }
 
 @media (max-width: 960px) {
@@ -35,29 +43,16 @@
 }
 
 .seccInicio {
-    background-image: url('../img/fondo/refrigerador.jpg');
-    background-size: cover;
     height: 950px;
 }
 
 .cajaInicio {
-    color: var(--BgMain);
-    background-color: rgba(1, 1, 1, 0.7);
     height: 100%;
     padding-bottom: 3.8em;
 }
 
 
-@media (max-width: 960px) {
-
-    .seccInicio {
-        background-image: url('../img/fondo/refrigerador-min2.jpg');
-    }
-}
+@media (max-width: 960px) {}
 
 
-@media (max-width: 768px) {
-    .seccInicio {
-        background-image: url('../img/fondo/refrigerador-min3.jpg');
-    }
-}
+@media (max-width: 768px) {}
