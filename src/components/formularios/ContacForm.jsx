@@ -1,5 +1,4 @@
 import { Form } from 'react-bootstrap'
-import { useRef } from 'react'
 import { ButtonServi } from '../botones/ButtonServi'
 import useEmail from '../../hooks/useEmail'
 import { Formik } from 'formik'
@@ -24,6 +23,7 @@ export const ContacForm = () => {
 					user_phone: '',
 					user_email: '',
 					message: '',
+					user_asunto: '',
 				}}
 				validationSchema={schema}
 				onSubmit={(values, { resetForm }) => {
@@ -34,12 +34,12 @@ export const ContacForm = () => {
 						user_phone: values.user_phone,
 						user_email: values.user_email,
 						message: values.message,
-						asunto: values.asunto,
+						user_asunto: values.user_asunto,
 					}
 					sendEmail(mensaje)
 				}}
 			>
-				{({ handleSubmit, handleChange, handleBlur, values }) => (
+				{({ handleSubmit, handleChange, handleBlur, values, errors }) => (
 					<Form className='row px-5 py-5' onSubmit={handleSubmit}>
 						<Form.Group className='mb-3 col-12 col-lg-6'>
 							<Form.Label>Nombre</Form.Label>
@@ -51,6 +51,7 @@ export const ContacForm = () => {
 								onChange={handleChange}
 								onBlur={handleBlur}
 							/>
+							{errors.user_name && <div className=''>{errors.user_name}</div>}
 						</Form.Group>
 						<Form.Group className='mb-3 col-12 col-lg-6'>
 							<Form.Label>Telefono</Form.Label>
@@ -62,6 +63,7 @@ export const ContacForm = () => {
 								onChange={handleChange}
 								onBlur={handleBlur}
 							/>
+							{errors.user_phone && <div className=''>{errors.user_name}</div>}
 						</Form.Group>
 						<Form.Group className='mb-3 col-12 col-lg-6'>
 							<Form.Label>Email</Form.Label>
@@ -73,13 +75,18 @@ export const ContacForm = () => {
 								onChange={handleChange}
 								onBlur={handleBlur}
 							/>
+							{errors.user_email && <div className=''>{errors.user_name}</div>}
 						</Form.Group>
 						<Form.Group className='mb-3 col-12 col-lg-6'>
 							<Form.Label>Asunto</Form.Label>
 							<Form.Select aria-label='selecciona un asunto' name='user_asunto'>
 								<option>selecciona un asunto</option>
-								<option value='Cotizacion'>Cotizacion</option>
-								<option value='Servicio'>Servicio</option>
+								<option value='Cotizacion' name='asunto'>
+									Cotizacion
+								</option>
+								<option value='Servicio' name='asunto'>
+									Servicio
+								</option>
 							</Form.Select>
 						</Form.Group>
 						<Form.Group className='mb-3 col-12'>
@@ -90,7 +97,9 @@ export const ContacForm = () => {
 								value={values.message}
 								onChange={handleChange}
 								onBlur={handleBlur}
-							></Form.Control>
+							>
+								{errors.message && <div className=''>{errors.user_name}</div>}
+							</Form.Control>
 						</Form.Group>
 						<Form.Group className='mb-3'>
 							<ButtonServi

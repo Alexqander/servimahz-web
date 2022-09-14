@@ -5,13 +5,13 @@ import emailjs from '@emailjs/browser'
 function useEmail(inputs) {
 	const [enviado, setEnviando] = useState(false)
 	const [message, setMessage] = useState('Enviar')
-	const [design, setDesign] = useState(styles.boton1)
+	const [design, setDesign] = useState(styles.boton2)
 	const sendEmail = (inputs) => {
 		console.log('entre al envio del email')
 		setEnviando(true)
 
 		const reset = () => {
-			setDesign(styles.boton1)
+			setDesign(styles.boton2)
 			setMessage('Enviar')
 		}
 
@@ -19,7 +19,7 @@ function useEmail(inputs) {
 			console.log('este es el contenido del formulario')
 			console.log(inputs)
 			emailjs
-				.sendForm(
+				.send(
 					import.meta.env.VITE_APP_SERVICE_ID,
 					import.meta.env.VITE_APP_TEMPLATE_ID,
 					inputs,

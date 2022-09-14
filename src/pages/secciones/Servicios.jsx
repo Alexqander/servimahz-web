@@ -1,6 +1,6 @@
 import refri2 from '../../assets/img/img-cards/tamaño-2/repa-min2.png'
 import sec2 from '../../assets/img/img-cards/tamaño-2/secadora-min2.png'
-import lic2 from '../../assets/img/img-cards/tamaño-2/licuadora-min2.jpeg'
+import licuadora from '../../assets/img/img-cards/tamaño-2/licuadora.png'
 import refacciones from '../../assets/img/img-cards/tamaño-2/refacciones.png'
 import { CardServi } from '../../components/cards/CardServi'
 import { Cabezera } from '../../components/Cabezera'
@@ -33,6 +33,7 @@ export const Servicios = () => {
 			btnMessage: 'Cotiza',
 			horizontal: false,
 			space: 'col-12 col-md-6 col-lg-3 my-5 px-4 px-md-4',
+			image: licuadora,
 		},
 		{
 			title: 'Venta de refacciones',

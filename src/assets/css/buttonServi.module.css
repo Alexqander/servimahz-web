@@ -1,6 +1,7 @@
 :root {
     --AzulPrincipal: #2F3656;
     --AzulSecundario: #234480;
+    --AzulBoton: #0A8CBF;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
     --Verde: #04bf8a;
@@ -43,13 +44,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    border: none;
 }
 
 .boton2:hover {
     font-family: var(--FuentePrincipal);
-    background-color: white;
-    border: 2px solid var(--AzulSecundario);
-    color: var(--AzulSecundario);
+    background-color: var(--AzulBoton);
+    color: var(--BgMain);
     transition: all 0.3s ease;
 }
 
