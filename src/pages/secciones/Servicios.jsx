@@ -6,6 +6,7 @@ import { CardServi } from '../../components/cards/CardServi'
 import { Cabezera } from '../../components/Cabezera'
 
 export const Servicios = () => {
+	const urlconfig = `https://wa.me/527774576803/?text=Hola necesito la cotizacion de una pieza`
 	const infoCards = [
 		{
 			title: 'Reparacion de lavadoras',
@@ -42,6 +43,7 @@ export const Servicios = () => {
 			horizontal: true,
 			image: refacciones,
 			space: 'col-md-12 col-lg-9 col-12',
+			reference: urlconfig,
 		},
 	]
 
@@ -60,6 +62,7 @@ export const Servicios = () => {
 									images={card.image}
 									titButton={card.btnMessage}
 									horizontal={card.horizontal}
+									reference={card.reference}
 								/>
 							</div>
 						</>

@@ -27,8 +27,6 @@ export const ContacForm = () => {
 				}}
 				validationSchema={schema}
 				onSubmit={(values, { resetForm }) => {
-					console.log('entre al enviar')
-
 					const mensaje = {
 						user_name: values.user_name,
 						user_phone: values.user_phone,
@@ -97,9 +95,8 @@ export const ContacForm = () => {
 								value={values.message}
 								onChange={handleChange}
 								onBlur={handleBlur}
-							>
-								{errors.message && <div className=''>{errors.user_name}</div>}
-							</Form.Control>
+							></Form.Control>
+							{errors.message && <div className=''>{errors.message}</div>}
 						</Form.Group>
 						<Form.Group className='mb-3'>
 							<ButtonServi

@@ -8,6 +8,7 @@ export const CardServi = ({
 	images,
 	titButton,
 	horizontal,
+	reference,
 }) => {
 	return (
 		<>
@@ -26,6 +27,7 @@ export const CardServi = ({
 						<div className={`col-12 col-lg-2 ${styles.botonH}`}>
 							<ButtonServi
 								isLink={true}
+								reference={reference}
 								message={'Cotizacion'}
 								design={btnStyles.boton1}
 							/>
@@ -59,4 +61,5 @@ CardServi.propTypes = {
 	images: PropTypes.string,
 	titButton: PropTypes.string,
 	horizontal: PropTypes.bool,
+	reference: PropTypes.string,
 }

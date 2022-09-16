@@ -19,7 +19,7 @@
 @media (max-width: 860px) {
     .menuResponsive {
         position: fixed;
-        left: 93%;
+        left: 90%;
         top: 1em;
         display: block;
     }
@@ -54,7 +54,7 @@
 @media (max-width:576px) {
     .menuResponsive {
         position: fixed;
-        left: 85%;
+        left: 75%;
         top: 1em;
         display: block;
     }
