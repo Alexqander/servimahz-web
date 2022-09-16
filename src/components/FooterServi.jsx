@@ -58,7 +58,7 @@ export const FooterServi = () => {
 					>
 						<div className='d-flex align-items-center  my-2'>
 							<img src={facebook} width='30px' height='30px' className='mx-3' />
-							<h4 className={styles.contactInfo}>@servimaz</h4>
+							<h4 className={styles.contactInfo}>@servimahz</h4>
 						</div>
 					</a>
 				</div>
