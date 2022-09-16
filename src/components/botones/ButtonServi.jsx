@@ -14,7 +14,12 @@ export const ButtonServi = ({
 		<>
 			{isLink ? (
 				<>
-					<a href={reference} className={design}>
+					<a
+						href={reference}
+						className={design}
+						target='_blank'
+						rel='noreferrer'
+					>
 						{message}
 					</a>
 				</>

@@ -7,7 +7,7 @@
 
 .cajaWhatsapp {
     position: fixed;
-    top: 88%;
+    top: 85%;
     left: 1%;
     color: var(--BgMain);
     background-color: var(--Verde);
@@ -43,7 +43,7 @@
 @media (max-width: 650px) {
     .caja-whatsapp {
         position: fixed;
-        top: 85%;
-        left: 75%;
+        top: 80%;
+        left: 70%;
     }
 }

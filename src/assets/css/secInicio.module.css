@@ -27,9 +27,8 @@
     margin-bottom: 2em;
 }
 
-.lavadoraImg {
-    width: auto;
-    height: 547px;
+.seccInicio {
+    height: 950px;
 }
 
 @media (max-width: 960px) {
@@ -55,4 +54,23 @@
 @media (max-width: 960px) {}
 
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+
+    .cajaInicio {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo>h2 {
+        font-size: 1.5em;
+    }
+
+    .titulo>h5 {
+        font-size: 1.0em;
+    }
+
+}

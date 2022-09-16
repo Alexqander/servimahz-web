@@ -7,7 +7,7 @@ export const Inicio = () => {
 		<>
 			<div className={`row gx-5 ${styles.seccInicio}`} id='seccInicio'>
 				<div
-					className={`${styles.cajaInicio} col-md-6 ${styles.titulo} d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center d-md-flex flex-md-column justify-content-md-center py-sm-5`}
+					className={`${styles.cajaInicio} col-md-6 ${styles.titulo} d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center d-md-flex flex-md-column justify-content-md-center py-sm-3`}
 				>
 					<h2 className='text-center'>
 						Tus electrodomesticos le dan vida a tu hogar , no permitas que esa
