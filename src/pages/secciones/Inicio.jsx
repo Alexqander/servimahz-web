@@ -5,7 +5,11 @@ import { DuplexLav } from '../../assets/img/svg/DuplexLav'
 export const Inicio = () => {
 	return (
 		<>
-			<div className={`row gx-5 ${styles.seccInicio}`} id='seccInicio'>
+			<div
+				className={`row gx-5 ${styles.seccInicio}`}
+				id='seccInicio'
+				data-aos='fade-up'
+			>
 				<div
 					className={`${styles.cajaInicio} col-md-6 ${styles.titulo} d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center d-md-flex flex-md-column justify-content-md-center py-sm-3`}
 				>

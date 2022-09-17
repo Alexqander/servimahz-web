@@ -6,7 +6,7 @@ export const Carrusel = ({ images, buttons, size, automatic, info }) => {
 	const { siguiente, atras, slideshow } = useCarrusel(automatic)
 	return (
 		<>
-			<div className='row'>
+			<div className='row' data-aos='fade-up'>
 				<div
 					className={styles.carrusel}
 					style={{ width: size.width, height: size.height }}
