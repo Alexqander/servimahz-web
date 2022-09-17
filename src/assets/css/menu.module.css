@@ -14,6 +14,7 @@
     font-family: var(--FuentePrincipal);
     display: none;
     border: none;
+    z-index: 1;
 }
 
 @media (max-width: 860px) {
@@ -30,6 +31,7 @@
         flex-direction: column;
         position: fixed;
         top: 70px;
+        z-index: 1;
     }
 }
 
@@ -54,7 +56,7 @@
 @media (max-width:576px) {
     .menuResponsive {
         position: fixed;
-        left: 75%;
+        left: 80%;
         top: 1em;
         display: block;
     }
