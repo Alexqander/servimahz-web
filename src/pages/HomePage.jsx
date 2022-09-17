@@ -6,7 +6,6 @@ import { Servicios } from './secciones/Servicios'
 import { Marcas } from './secciones/Marcas'
 import { WhathsappButton } from '../components/botones/WhathsappButton'
 import { Inicio } from './secciones/Inicio'
-import { Opiniones } from './secciones/Opiniones'
 
 export const HomePage = () => {
 	return (
@@ -21,12 +20,9 @@ export const HomePage = () => {
 				<div className='row my-5 my-lg-1' id='seccNosotros'>
 					<Nosotros />
 				</div>
-				<div className='my-5 ' id='seccServicios'>
+				<div className='my-5' id='seccServicios'>
 					<Servicios />
 					<Marcas />
-				</div>
-				<div className='my-5' id='seccOpiniones'>
-					<Opiniones />
 				</div>
 				<div className='my-5' id='seccContacto'>
 					<Contacto />
