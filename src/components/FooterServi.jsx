@@ -46,10 +46,16 @@ export const FooterServi = () => {
 							<h4 className={styles.contactInfo}>7774576803</h4>
 						</div>
 					</a>
-					<div className='d-flex align-items-center my-2'>
-						<img src={email} width='30px' height='30px' className='mx-3' />
-						<h4 className={styles.contactInfo}>contacto@servimahz.com.mx</h4>
-					</div>
+					<a
+						href='mailto:contacto@servimahz.com.mx?Subject=Cotizacion'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<div className='d-flex align-items-center my-2'>
+							<img src={email} width='30px' height='30px' className='mx-3' />
+							<h4 className={styles.contactInfo}>contacto@servimahz.com.mx</h4>
+						</div>
+					</a>
 					<a
 						style={{ textDecoration: 'none' }}
 						href='https://www.facebook.com/servimahz'
@@ -58,7 +64,7 @@ export const FooterServi = () => {
 					>
 						<div className='d-flex align-items-center  my-2'>
 							<img src={facebook} width='30px' height='30px' className='mx-3' />
-							<h4 className={styles.contactInfo}>@servimaz</h4>
+							<h4 className={styles.contactInfo}>@servimahz</h4>
 						</div>
 					</a>
 				</div>

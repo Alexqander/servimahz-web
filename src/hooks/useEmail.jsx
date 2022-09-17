@@ -7,7 +7,6 @@ function useEmail(inputs) {
 	const [message, setMessage] = useState('Enviar')
 	const [design, setDesign] = useState(styles.boton2)
 	const sendEmail = (inputs) => {
-		console.log('entre al envio del email')
 		setEnviando(true)
 
 		const reset = () => {
@@ -16,8 +15,6 @@ function useEmail(inputs) {
 		}
 
 		const enviar = () => {
-			console.log('este es el contenido del formulario')
-			console.log(inputs)
 			emailjs
 				.send(
 					import.meta.env.VITE_APP_SERVICE_ID,
@@ -38,7 +35,7 @@ function useEmail(inputs) {
 						console.log(result.text)
 					},
 					(error) => {
-						console.log(error.text)
+						console.error(error)
 					}
 				)
 		}

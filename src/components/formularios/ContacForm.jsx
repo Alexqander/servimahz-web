@@ -34,7 +34,13 @@ export const ContacForm = () => {
 						message: values.message,
 						user_asunto: values.user_asunto,
 					}
+					console.log(
+						'🚀 ~ file: ContacForm.jsx ~ line 37 ~ ContacForm ~ mensaje',
+						mensaje
+					)
+
 					sendEmail(mensaje)
+					resetForm()
 				}}
 			>
 				{({ handleSubmit, handleChange, handleBlur, values, errors }) => (
@@ -48,6 +54,7 @@ export const ContacForm = () => {
 								value={values.user_name}
 								onChange={handleChange}
 								onBlur={handleBlur}
+								isInvalid={!!errors.user_name}
 							/>
 							{errors.user_name && <div className=''>{errors.user_name}</div>}
 						</Form.Group>
@@ -60,6 +67,7 @@ export const ContacForm = () => {
 								value={values.user_phone}
 								onChange={handleChange}
 								onBlur={handleBlur}
+								isInvalid={!!errors.user_phone}
 							/>
 							{errors.user_phone && <div className=''>{errors.user_name}</div>}
 						</Form.Group>
@@ -72,19 +80,23 @@ export const ContacForm = () => {
 								value={values.user_email}
 								onChange={handleChange}
 								onBlur={handleBlur}
+								isInvalid={!!errors.user_email}
 							/>
 							{errors.user_email && <div className=''>{errors.user_name}</div>}
 						</Form.Group>
 						<Form.Group className='mb-3 col-12 col-lg-6'>
 							<Form.Label>Asunto</Form.Label>
-							<Form.Select aria-label='selecciona un asunto' name='user_asunto'>
-								<option>selecciona un asunto</option>
-								<option value='Cotizacion' name='asunto'>
-									Cotizacion
-								</option>
-								<option value='Servicio' name='asunto'>
-									Servicio
-								</option>
+							<Form.Select
+								aria-label='selecciona un asunto'
+								name='user_asunto'
+								value={values.user_asunto}
+								onChange={handleChange}
+								onBlur={handleBlur}
+								as='select'
+							>
+								<option values=''>selecciona un asunto</option>
+								<option value='Cotizacion'>Cotizacion</option>
+								<option value='Servicio'>Servicio</option>
 							</Form.Select>
 						</Form.Group>
 						<Form.Group className='mb-3 col-12'>
@@ -95,6 +107,7 @@ export const ContacForm = () => {
 								value={values.message}
 								onChange={handleChange}
 								onBlur={handleBlur}
+								isInvalid={!!errors.message}
 							></Form.Control>
 							{errors.message && <div className=''>{errors.message}</div>}
 						</Form.Group>
