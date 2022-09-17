@@ -55,7 +55,7 @@ export const Servicios = () => {
 				{infoCards.map((card, i) => {
 					return (
 						<>
-							<div className={card.space} key={`crd--${i}`}>
+							<div data-aos='zoom-in' className={card.space} key={`crd--${i}`}>
 								<CardServi
 									title={card.title}
 									content={card.content}

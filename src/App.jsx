@@ -1,12 +1,20 @@
 import './App.css'
 import { AppRouter } from './routes/AppRouter'
+import AOS from 'aos'
+import { useEffect } from 'react'
 
-function App () {
-  return (
-    <div className="App">
-      <AppRouter/>
-    </div>
-  )
+function App() {
+	useEffect(() => {
+		AOS.init({
+			duration: 1500,
+		})
+	}, [])
+
+	return (
+		<div className='App'>
+			<AppRouter />
+		</div>
+	)
 }
 
 export default App

@@ -17,7 +17,7 @@ export const NavServi = () => {
 			<Navbar
 				className={`p-0 ${styles.navPrincipal}`}
 				variant='light'
-				style={{ position: 'fixed' }}
+				style={{ position: 'fixed', zIndex: '1' }}
 			>
 				<Container
 					fluid

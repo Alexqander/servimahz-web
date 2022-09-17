@@ -17,7 +17,7 @@ export const HomePage = () => {
 					number={527774576803}
 				/>
 				<Inicio />
-				<div className='row my-5 my-lg-1' id='seccNosotros'>
+				<div className='row my-5 my-lg-1' id='seccNosotros' data-aos='fade-up'>
 					<Nosotros />
 				</div>
 				<div className='my-5' id='seccServicios'>

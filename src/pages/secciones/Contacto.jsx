@@ -5,7 +5,7 @@ export const Contacto = () => {
 	return (
 		<>
 			<Cabezera titulo={'Contacto'} />
-			<div className='row'>
+			<div className='row' data-aos='fade-up'>
 				<div className='col-12 col-lg-4 px-4 py-2'>
 					<div className={`${styles.informacion} px-3`}>
 						<h4>Direccion</h4>
