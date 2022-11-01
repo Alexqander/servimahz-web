@@ -47,13 +47,14 @@ export const FooterServi = () => {
 						</div>
 					</a>
 					<a
-						href='mailto:contacto@servimahz.com.mx?Subject=Cotizacion'
+						style={{ textDecoration: 'none' }}
+						href='mailto:servimahz@hotmail.com?Subject=Cotizacion'
 						target='_blank'
 						rel='noreferrer'
 					>
 						<div className='d-flex align-items-center my-2'>
 							<img src={email} width='30px' height='30px' className='mx-3' />
-							<h4 className={styles.contactInfo}>contacto@servimahz.com.mx</h4>
+							<h4 className={styles.contactInfo}>servimahz@hotmail.com</h4>
 						</div>
 					</a>
 					<a
