@@ -2,7 +2,7 @@
     --AzulPrincipal: #2F3656;
     --BgMain: #F5F5F5;
     --FuentePrincipal: 'Montserrat', sans-serif;
-    --Verde: #04bf8a;
+    --Verde: #209876;
 }
 
 .cajaWhatsapp {
@@ -19,13 +19,13 @@
 
 }
 
-.caja-whatsapp:hover {
+.cajaWhatsapp:hover {
     background-color: rgba(10, 154, 113, 0.871);
 }
 
 @media (max-width: 960px) {
 
-    .caja-whatsapp {
+    .cajaWhatsapp {
         position: fixed;
         top: 90%;
         left: 85%;
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 768px) {
-    .caja-whatsapp {
+    .cajaWhatsapp {
         position: fixed;
         top: 90%;
         left: 83%;
@@ -42,7 +42,7 @@
 }
 
 @media (max-width: 650px) {
-    .caja-whatsapp {
+    .cajaWhatsapp {
         position: fixed;
         top: 80%;
         left: 70%;
