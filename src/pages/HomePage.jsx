@@ -25,9 +25,9 @@ export const HomePage = () => {
 					<Servicios />
 					<Marcas />
 				</div>
-				<div className='my-5' id='secComentarios'>
+				{/* <div className='my-5' id='secComentarios'>
 					<Opiniones />
-				</div>
+				</div> */}
 				<div className='my-5' id='seccContacto'>
 					<Contacto />
 				</div>
