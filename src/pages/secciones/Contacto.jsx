@@ -28,7 +28,7 @@ export const Contacto = () => {
 							<span>777-475-68-03</span>
 						</div>
 						<h4>Email</h4>
-						<span>contacto@servimahz.com.mx</span>
+						<span>servimahz@hotmail.com</span>
 					</div>
 				</div>
 				<div className={`col-12 col-lg-7 my-4 py-5 ${styles.formContacto}`}>
