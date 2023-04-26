@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 :root {
   --AzulPrincipal: #2f3656;
   --BgMain: #f5f5f5;
