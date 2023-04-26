@@ -1,50 +1,79 @@
-import { Container, Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { Menu } from './Menu'
-import styles from '../assets/css/navServi.module.css'
-import { Logo } from '../assets/img/svg/Logo'
+import { LogoAzul } from '../assets/img/svg/LogoAzul'
 
 export const NavServi = () => {
-	const links = [
-		{ name: 'Inicio', reference: '/home' },
-		{ name: 'Nosotros', reference: '#seccNosotros' },
-		{ name: 'Servicios', reference: '#seccServicios' },
-		{ name: 'Contacto', reference: '#seccContacto' },
-	]
-
 	return (
 		<>
-			<Navbar
-				className={`p-0 ${styles.navPrincipal}`}
-				variant='light'
-				style={{ position: 'fixed', zIndex: '1' }}
-			>
-				<Container
-					fluid
-					className='d-flex flex-row justify-content-between align-items-center py-3'
-				>
-					<Navbar.Brand href='/home'>
-						<Logo width='55%' height='auto'></Logo>
-					</Navbar.Brand>
-					<Nav>
-						<div className={`pt-2 ${styles.cajaLinks}`}>
-							<Link className={styles.enlace} to={'/home'}>
-								<p className='mx-5'>Inicio</p>
-							</Link>
-							<a className={styles.enlace} href='#seccNosotros'>
-								<p className='mx-5'>Nosotros</p>
-							</a>
-							<a href='#seccServicios' className={styles.enlace}>
-								<p className=' mx-5'>Servicios</p>
-							</a>
-							<a href='#seccContacto' className={styles.enlace}>
-								<p className=' mx-5'>Contacto</p>
+			<header aria-label='Site Header' className='shadow-sm'>
+				<div className='mx-auto max-w-screen-xl p-4'>
+					<div className='flex items-center justify-between gap-4 lg:gap-10'>
+						<div className='flex lg:w-0 lg:flex-1'>
+							<a href='#'>
+								<LogoAzul></LogoAzul>
 							</a>
 						</div>
-					</Nav>
-				</Container>
-			</Navbar>
-			<Menu links={links} />
+
+						<nav
+							aria-label='Site Nav'
+							className='hidden gap-8 text-sm font-medium md:flex'
+						>
+							<Link to={'/home'}>
+								<p className='text-gray-500'>Inicio</p>
+							</Link>
+
+							<a className='text-gray-500' href='#seccNosotros'>
+								Nosotros
+							</a>
+							<a className='text-gray-500' href='#seccNosotros'>
+								Servicios
+							</a>
+							<a className='text-gray-500' href='#seccContacto'>
+								Contacto
+							</a>
+						</nav>
+
+						<div className='hidden flex-1 items-center justify-end gap-4 sm:flex'>
+							<a
+								className='rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500'
+								href=''
+							>
+								Log in
+							</a>
+
+							<a
+								className='rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white'
+								href=''
+							>
+								Sign up
+							</a>
+						</div>
+
+						<div className='lg:hidden'>
+							<button
+								className='rounded-lg bg-gray-100 p-2 text-gray-600'
+								type='button'
+							>
+								<span className='sr-only'>Open menu</span>
+								<svg
+									aria-hidden='true'
+									className='h-5 w-5'
+									fill='none'
+									stroke='currentColor'
+									viewbox='0 0 24 24'
+									xmlns='http://www.w3.org/2000/svg'
+								>
+									<path
+										d='M4 6h16M4 12h16M4 18h16'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										strokeWidth='2'
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</header>
 		</>
 	)
 }
