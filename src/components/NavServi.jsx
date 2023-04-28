@@ -4,12 +4,15 @@ import { LogoAzul } from '../assets/img/svg/LogoAzul'
 export const NavServi = () => {
 	return (
 		<>
-			<header aria-label='Site Header' className='shadow-sm'>
+			<header
+				aria-label='Site Header'
+				className='bg-white shadow-sm fixed top-0 w-full z-50'
+			>
 				<div className='mx-auto max-w-screen-xl p-4'>
 					<div className='flex items-center justify-between gap-4 lg:gap-10'>
 						<div className='flex lg:w-0 lg:flex-1'>
 							<a href='#'>
-								<LogoAzul></LogoAzul>
+								<LogoAzul width='55%' height='auto'></LogoAzul>
 							</a>
 						</div>
 
@@ -18,34 +21,28 @@ export const NavServi = () => {
 							className='hidden gap-8 text-sm font-medium md:flex'
 						>
 							<Link to={'/home'}>
-								<p className='text-gray-500'>Inicio</p>
+								<p className='text-gray-500 underline-none'>Inicio</p>
 							</Link>
 
-							<a className='text-gray-500' href='#seccNosotros'>
+							<a className='text-gray-500 underline-none' href='#seccNosotros'>
 								Nosotros
 							</a>
-							<a className='text-gray-500' href='#seccNosotros'>
+							<a className='text-gray-500 underline-none' href='#seccNosotros'>
 								Servicios
 							</a>
-							<a className='text-gray-500' href='#seccContacto'>
+							<a className='text-gray-500 underline-none' href='#seccContacto'>
 								Contacto
 							</a>
 						</nav>
 
 						<div className='hidden flex-1 items-center justify-end gap-4 sm:flex'>
-							<a
-								className='rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500'
-								href=''
-							>
+							<button className='rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500'>
 								Log in
-							</a>
+							</button>
 
-							<a
-								className='rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white'
-								href=''
-							>
+							<button className='rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white'>
 								Sign up
-							</a>
+							</button>
 						</div>
 
 						<div className='lg:hidden'>

@@ -3,7 +3,6 @@ import sec2 from '../../assets/img/img-cards/tamaño-2/secadora-min2.png'
 import licuadora from '../../assets/img/img-cards/tamaño-2/licuadora.png'
 import refacciones from '../../assets/img/img-cards/tamaño-2/refacciones.png'
 import { CardServi } from '../../components/cards/CardServi'
-import { Cabezera } from '../../components/Cabezera'
 
 export const Servicios = () => {
 	const urlconfig = `https://wa.me/527774576803/?text=Hola necesito la cotizacion de una pieza`
@@ -49,26 +48,40 @@ export const Servicios = () => {
 
 	return (
 		<>
-			<div className='row gx-5 d-flex flex-row justify-content-center px-4 px-md-1 px-lg-1'>
-				<Cabezera titulo={'Servicios'} />
+			<section className='bg-white text-gray-600 body-font'>
+				<div className='container px-12 py-24 mx-auto'>
+					<div className='flex flex-wrap w-full mb-20'>
+						<div className='lg:w-1/2 w-full mb-6 lg:mb-0'>
+							<h1 className='sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900'>
+								Nuestros Servicios
+							</h1>
+							<div className='h-1 w-20 bg-blue-500 rounded' />
+						</div>
+						<p className='lg:w-1/2 w-full leading-relaxed text-gray-500'>
+							Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+							gentrify, subway tile poke farm-to-table. Franzen you probably
+							haven heard of them man bun deep jianbing selfies heirloom prism
+							food truck ugh squid celiac humblebrag.
+						</p>
+					</div>
 
-				{infoCards.map((card, i) => {
-					return (
-						<>
-							<div data-aos='zoom-in' className={card.space} key={`crd--${i}`}>
-								<CardServi
-									title={card.title}
-									content={card.content}
-									images={card.image}
-									titButton={card.btnMessage}
-									horizontal={card.horizontal}
-									reference={card.reference}
-								/>
-							</div>
-						</>
-					)
-				})}
-			</div>
+					<div className='flex flex-wrap -m-4'>
+						{infoCards.map((card, i) => {
+							return (
+								<>
+									<CardServi
+										key={`crd--${i}`}
+										title={card.title}
+										content={card.content}
+										images={card.image}
+										horizontal={card.horizontal}
+									/>
+								</>
+							)
+						})}
+					</div>
+				</div>
+			</section>
 		</>
 	)
 }
