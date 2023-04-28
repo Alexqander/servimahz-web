@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { RatingStar } from './cards/RatingStar'
 import useGooglePlaceReviews from '../hooks/useGooglePlaceReviews'
 
-const GooglePlaceReviews = ({ apiKey, placeId }) => {
+const GooglePlaceReviews = () => {
+	const apiKey = import.meta.env.VITE_GOOGLE_API_KEY
+	const placeId = import.meta.env.VITE_GOOGLE_PLACE_ID
+
 	const { reviews, loading, error } = useGooglePlaceReviews(apiKey, placeId)
 
 	if (loading) {
