@@ -1,55 +1,27 @@
 import PropTypes from 'prop-types'
-export const CardServi = ({
-	title,
-	content,
-	images,
-	horizontal,
-	reference,
-}) => {
+export const CardServi = ({ title, content, images, subtitle, isReverse }) => {
 	return (
 		<>
-			{horizontal ? (
-				<>
-					<div className='xl:w-1/4 md:w-1/2 p-4'>
-						<div className='bg-gray-100 p-6 rounded-lg'>
-							<img
-								src={images}
-								className='h-40 rounded w-full object-cover object-center mb-6'
-								width={'auto'}
-							/>
-							<h3 className='tracking-widest text-blue-500 text-xs font-medium title-font'>
-								Linea blanca
-							</h3>
-							<h2 className='text-lg text-gray-900 font-medium title-font mb-4'>
-								{title}
-							</h2>
-							<p className='leading-relaxed text-base'>
-								Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-								hexagon disrupt edison bulbche.
-							</p>
-						</div>
-					</div>
-				</>
-			) : (
-				<>
-					<div className='xl:w-1/4 md:w-1/2 p-4' data-aos='zoom-in'>
-						<div className='bg-gray-100 p-6 rounded-lg'>
-							<img
-								src={images}
-								className='h-40 rounded w-full object-cover object-center mb-6'
-								width={'auto'}
-							/>
-							<h3 className='tracking-widest text-blue-500 text-xs font-medium title-font'>
-								Linea blanca
-							</h3>
-							<h2 className='text-lg text-gray-900 font-medium title-font mb-4'>
-								{title}
-							</h2>
-							<p className='leading-relaxed text-base'>{content}</p>
-						</div>
-					</div>
-				</>
-			)}
+			<section
+				className={`lg:flex lg:items-center ${
+					isReverse ? 'flex-row-reverse' : ''
+				} `}
+			>
+				<div className='lg:w-1/2 px-10'>
+					<p className='text-lg tracking-wider text-blue-500'>{subtitle}</p>
+					<h2 className='mt-2 text-2xl font-semibold text-gray-800 capitalize '>
+						{title}
+					</h2>
+					<p className='text-lg tracking-wider text-gray-500'>{content}</p>
+				</div>
+				<div className='mt-4 lg:w-1/2 lg:mt-0'>
+					<img
+						className='object-cover w-full h-64 rounded-lg md:h-96'
+						src={images}
+						alt='servicio'
+					/>
+				</div>
+			</section>
 		</>
 	)
 }
@@ -59,6 +31,6 @@ CardServi.propTypes = {
 	content: PropTypes.string,
 	images: PropTypes.string,
 	titButton: PropTypes.string,
-	horizontal: PropTypes.bool,
-	reference: PropTypes.string,
+	subtitle: PropTypes.string,
+	isReverse: PropTypes.bool,
 }

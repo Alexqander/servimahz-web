@@ -1,16 +1,19 @@
 import { useState } from 'react'
-import styles from '../assets/css/buttonServi.module.css'
 import emailjs from '@emailjs/browser'
 
 function useEmail(inputs) {
 	const [enviado, setEnviando] = useState(false)
 	const [message, setMessage] = useState('Enviar')
-	const [design, setDesign] = useState(styles.boton2)
+	const [design, setDesign] = useState(
+		' bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50'
+	)
 	const sendEmail = (inputs) => {
 		setEnviando(true)
 
 		const reset = () => {
-			setDesign(styles.boton2)
+			setDesign(
+				' bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50'
+			)
 			setMessage('Enviar')
 		}
 
@@ -25,7 +28,9 @@ function useEmail(inputs) {
 				.then(
 					(result) => {
 						setEnviando(false)
-						setDesign(styles.boton4)
+						setDesign(
+							' bg-blue-500 rounded-lg hover:bg-green-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50'
+						)
 						setMessage('Enviado')
 
 						setTimeout(() => {

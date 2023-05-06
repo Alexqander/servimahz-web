@@ -1,42 +1,37 @@
-import { ButtonServi } from '../../components/botones/ButtonServi'
-import { DuplexLav } from '../../assets/img/svg/DuplexLav'
+import refribanner from '../../assets/img/fondo/refrigerador.jpeg'
+
 export const Inicio = () => {
 	return (
 		<>
-			<section className='text-gray-600 body-font w-full'>
-				<div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
-					<div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
-						<h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900'>
-							Tus electrodomesticos le dan vida a tu hogar , no permitas que esa
-							vida termine
-						</h1>
-						<p className='mb-8 leading-relaxed'>
-							Servimahz es el lugar perfecto para todas sus necesidades de
-							refrigeracion y lavadoras. Con una amplia gama de productos ,
-							servicio técnico y venta de refacciones, Servimahz es el lugar al
-							que acudir para todas sus necesidades de electrodomésticos.
-						</p>
-						<div className='flex justify-center'>
-							<ButtonServi
-								isLink={true}
-								message='Llamanos'
-								design={
-									'inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg'
-								}
-								reference='tel:7773210948'
-							/>
-							<ButtonServi
-								isLink={true}
-								message='Conocenos'
-								design={
-									'ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg'
-								}
-								reference='#seccNosotros'
-							/>
+			<section className='container-fluid'>
+				<div
+					className='w-full bg-center bg-cover h-[52rem]'
+					style={{
+						backgroundImage: `url(${refribanner})`,
+					}}
+				>
+					<div className='px-4 lg:px-0 flex items-center justify-center w-full h-full bg-gray-900/60'>
+						<div className='text-center'>
+							<h1 className='text-3xl font-semibold text-white lg:text-4xl'>
+								Tus <span className='text-blue-600'>electrodomesticos</span> le
+								dan vida a tu hogar , no permitas que esa vida termine
+							</h1>
+							<div className=' items-center w-1/2 mx-auto mt-4'>
+								<p className='text-white text-xl mb-8 leading-relaxed'>
+									Servimahz es el lugar perfecto para todas sus necesidades de
+									refrigeracion y lavadoras. Con una amplia gama de productos ,
+									servicio técnico y venta de refacciones, Servimahz es el lugar
+									al que acudir para todas sus necesidades de electrodomésticos.
+								</p>
+							</div>
+
+							<a
+								href='tel:7773210948'
+								className='px-24 py-3 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500'
+							>
+								Llamanos
+							</a>
 						</div>
-					</div>
-					<div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
-						<DuplexLav width={400} height={640} />
 					</div>
 				</div>
 			</section>

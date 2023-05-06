@@ -1,75 +1,105 @@
 import { Link } from 'react-router-dom'
 import { LogoAzul } from '../assets/img/svg/LogoAzul'
+import { useState } from 'react'
 
 export const NavServi = () => {
+	const [isOpen, setIsOpen] = useState(false)
+
+	const toggleMenu = () => {
+		setIsOpen(!isOpen)
+	}
+
 	return (
 		<>
-			<header
-				aria-label='Site Header'
-				className='bg-white shadow-sm fixed top-0 w-full z-50'
-			>
-				<div className='mx-auto max-w-screen-xl p-4'>
-					<div className='flex items-center justify-between gap-4 lg:gap-10'>
-						<div className='flex lg:w-0 lg:flex-1'>
-							<a href='#'>
-								<LogoAzul width='55%' height='auto'></LogoAzul>
-							</a>
-						</div>
-
-						<nav
-							aria-label='Site Nav'
-							className='hidden gap-8 text-sm font-medium md:flex'
-						>
-							<Link to={'/home'}>
-								<p className='text-gray-500 underline-none'>Inicio</p>
-							</Link>
-
-							<a className='text-gray-500 underline-none' href='#seccNosotros'>
-								Nosotros
-							</a>
-							<a className='text-gray-500 underline-none' href='#seccNosotros'>
-								Servicios
-							</a>
-							<a className='text-gray-500 underline-none' href='#seccContacto'>
-								Contacto
-							</a>
-						</nav>
-
-						<div className='hidden flex-1 items-center justify-end gap-4 sm:flex'>
-							<button className='rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500'>
-								Log in
-							</button>
-
-							<button className='rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white'>
-								Sign up
-							</button>
-						</div>
-
-						<div className='lg:hidden'>
+			<header className='bg-white shadow-sm fixed top-0 w-full z-50'>
+				<nav className='container p-6 mx-auto lg:flex lg:justify-between lg:items-center'>
+					<div className='flex items-center justify-between'>
+						<a href='#'>
+							<LogoAzul width='55%' height='100%'></LogoAzul>
+						</a>
+						{/* Mobile menu button */}
+						<div className='flex lg:hidden'>
 							<button
-								className='rounded-lg bg-gray-100 p-2 text-gray-600'
+								onClick={toggleMenu}
 								type='button'
+								className='text-gray-500  hover:text-gray-600  focus:outline-none focus:text-gray-600 '
+								aria-label='toggle menu'
 							>
-								<span className='sr-only'>Open menu</span>
-								<svg
-									aria-hidden='true'
-									className='h-5 w-5'
-									fill='none'
-									stroke='currentColor'
-									viewbox='0 0 24 24'
-									xmlns='http://www.w3.org/2000/svg'
-								>
-									<path
-										d='M4 6h16M4 12h16M4 18h16'
-										strokeLinecap='round'
-										strokeLinejoin='round'
+								{!isOpen ? (
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										className='w-6 h-6'
+										fill='none'
+										viewBox='0 0 24 24'
+										stroke='currentColor'
 										strokeWidth='2'
-									/>
-								</svg>
+									>
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											d='M4 8h16M4 16h16'
+										/>
+									</svg>
+								) : (
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										className='w-6 h-6'
+										fill='none'
+										viewBox='0 0 24 24'
+										stroke='currentColor'
+										strokeWidth='2'
+									>
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											d='M6 18L18 6M6 6l12 12'
+										/>
+									</svg>
+								)}
 							</button>
 						</div>
 					</div>
-				</div>
+					{/* Mobile Menu open: "block", Menu closed: "hidden" */}
+					<div
+						className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:translate-x-0 opacity-100 lg:bg-transparent  lg:shadow-none  lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:flex lg:items-center ${
+							isOpen
+								? 'translate-x-0 opacity-100'
+								: 'opacity-0 -translate-x-full'
+						}`}
+					>
+						<div className='flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0'>
+							<Link to={'/home'}>
+								<p className='text-gray-800 transition-colors duration-300 transform lg:mx-8   hover:text-blue-500'>
+									Inicio
+								</p>
+							</Link>
+							<a
+								className='text-gray-700 transition-colors duration-300 transform lg:mx-8  hover:text-blue-500'
+								href='#seccNosotros'
+							>
+								Nosotros
+							</a>
+							<a
+								className='text-gray-700 transition-colors duration-300 transform lg:mx-8   hover:text-blue-500'
+								href='#seccServicios'
+							>
+								Servicios
+							</a>
+							<a
+								className='text-gray-700 transition-colors duration-300 transform lg:mx-8   hover:text-blue-500'
+								href='#seccComentarios'
+							>
+								Comentarios
+							</a>
+						</div>
+						<a
+							className='block px-5 py-2 mt-4 text-sm text-center text-white capitalize bg-blue-600 rounded-lg lg:mt-0 hover:bg-blue-500 lg:w-auto'
+							href='#seccContacto'
+						>
+							Contacto
+						</a>
+					</div>
+				</nav>
 			</header>
 		</>
 	)
