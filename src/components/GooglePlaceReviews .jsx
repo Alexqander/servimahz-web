@@ -1,14 +1,16 @@
 import { PropTypes } from 'prop-types'
-import React, { useState, useEffect } from 'react'
 import { RatingStar } from './cards/RatingStar'
+import { A11y, Navigation, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/navigation'
 import useGooglePlaceReviews from '../hooks/useGooglePlaceReviews'
+import { SwiperSlideButtons } from './botones/SwiperSlideButtons'
 
 const GooglePlaceReviews = () => {
 	const apiKey = import.meta.env.VITE_GOOGLE_API_KEY
 	const placeId = import.meta.env.VITE_GOOGLE_PLACE_ID
-
 	const { reviews, loading, error } = useGooglePlaceReviews(apiKey, placeId)
-
 	if (loading) {
 		return <div>Loading reviews...</div>
 	}
@@ -47,84 +49,79 @@ const GooglePlaceReviews = () => {
 	}
 
 	return (
-		<section className='bg-white'>
-			<div className='container px-6 py-10 mx-auto'>
-				<div className='mt-6 md:flex md:items-center md:justify-between'>
-					<div>
-						<h1 className='text-2xl font-semibold text-gray-800 lg:text-3xl'>
-							Lo que nuestros clientes estan diciendo
-						</h1>
-						<div className='flex mx-auto mt-6'>
-							<span className='inline-block w-40 h-1 bg-blue-500 rounded-full' />
-							<span className='inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full' />
-							<span className='inline-block w-1 h-1 bg-blue-500 rounded-full' />
-						</div>
+		<section className='bg-gray-100'>
+			<div className='mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:me-0 lg:pe-0 lg:ps-8'>
+				<div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16'>
+					<div className='max-w-xl text-center ltr:sm:text-left rtl:sm:text-right'>
+						<h2 className='text-blue-800 text-3xl font-bold tracking-tight sm:text-4xl'>
+							No confíe solo en nuestra palabra...
+							<br className='hidden sm:block lg:hidden' />
+							Lea las reseñas de nuestros clientes
+						</h2>
+
+						<p className='mt-4 text-gray-500'>
+							En servimahz, valoramos la opinión de nuestros clientes y nos
+							enorgullecemos de brindar un servicio excepcional en cada visita.
+							Pero no queremos que simplemente confíes en lo que decimos,
+							queremos que escuches directamente de aquellos que ya han
+							experimentado nuestra dedicación y profesionalismo.
+						</p>
 					</div>
-					<div className='flex justify-between mt-8 md:mt-0'>
-						<button
-							title='left arrow'
-							className='p-2 mx-3 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:bg-gray-100'
+
+					<div className='-mx-6 lg:col-span-2 lg:mx-0'>
+						<Swiper
+							modules={[Navigation, Pagination, A11y]}
+							loop={true}
+							slidesPerView={1}
+							spaceBetween={32}
+							autoplay={{
+								delay: 8000,
+							}}
+							breakpoints={{
+								640: {
+									centeredSlides: true,
+									slidesPerView: 1.25,
+								},
+								1024: {
+									centeredSlides: false,
+									slidesPerView: 1.5,
+								},
+							}}
 						>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								className='w-6 h-6'
-								fill='none'
-								viewBox='0 0 24 24'
-								stroke='currentColor'
-								strokeWidth={2}
-							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									d='M15 19l-7-7 7-7'
-								/>
-							</svg>
-						</button>
-						<button
-							title='right arrow'
-							className='p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:bg-gray-100'
-						>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								className='w-6 h-6'
-								fill='none'
-								viewBox='0 0 24 24'
-								stroke='currentColor'
-								strokeWidth={2}
-							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									d='M9 5l7 7-7 7'
-								/>
-							</svg>
-						</button>
-					</div>
-				</div>
-				<div className='relative'>
-					<section className='grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3 transition-all duration-300 ease-in-out'>
-						{reviews.map((review, index) => (
-							<div key={index} className='p-8 border rounded-lg'>
-								<p className='leading-loose text-gray-500 '>{review.text}</p>
-								<RatingStar rating={review.rating}></RatingStar>
-								<div className='flex items-center mt-8 -mx-2'>
-									<img
-										className='object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 '
-										src={review.profile_photo_url}
-										alt
-									/>
-									<div className='mx-2'>
-										<h1 className='text-sm text-gray-500 dark:text-gray-400'>
-											{review.relative_time_description}
-										</h1>
-										<h1 className='font-semibold text-gray-800'>
-											{review.author_name}
-										</h1>
+							{reviews.map((review, index) => (
+								<SwiperSlide key={index}>
+									<div className='container'>
+										<blockquote className='flex h-[580px] md:h-96 flex-col justify-between bg-white p-12'>
+											<RatingStar rating={review.rating}></RatingStar>
+											<img
+												className='h-16 w-16 rounded-full'
+												src={review.profile_photo_url}
+												alt={review.author_name}
+											/>
+											<div className='mt-4'>
+												<p className='text-2xl font-bold text-blue-600 sm:text-3xl'></p>
+
+												<p className='mt-4 leading-relaxed text-gray-500'>
+													{review.text}
+												</p>
+											</div>
+
+											<footer className='mt-8 text-sm text-gray-500'>
+												&mdash; {review.author_name}
+											</footer>
+										</blockquote>
 									</div>
-								</div>
+								</SwiperSlide>
+							))}
+
+							<div className='hidden lg:mt-8 lg:flex lg:justify-center lg:gap-4'>
+								<SwiperSlideButtons></SwiperSlideButtons>
 							</div>
-						))}
-					</section>
+							<div className='mt-8 flex justify-center gap-4 lg:hidden'>
+								<SwiperSlideButtons></SwiperSlideButtons>
+							</div>
+						</Swiper>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -7,6 +7,12 @@ const useGooglePlaceReviews = (apiKey, placeId) => {
 
 	useEffect(() => {
 		const loadScript = (src, callback) => {
+			// Verificar si el script ya ha sido cargado antes
+			if (document.querySelector(`script[src="${src}"]`)) {
+				callback()
+				return
+			}
+
 			const script = document.createElement('script')
 			script.src = src
 			script.async = true
