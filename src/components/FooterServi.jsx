@@ -1,4 +1,7 @@
+
 import { LogoNuevo } from '../assets/img/svg/LogoNuevo'
+
+
 import { WhatsAppIcon } from '../assets/img/svg/WhatsAppIcon'
 
 export const FooterServi = () => {
