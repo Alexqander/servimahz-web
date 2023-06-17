@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { LogoAzul } from '../assets/img/svg/LogoAzul'
 import { useState } from 'react'
+import { LogoNuevo } from '../assets/img/svg/LogoNuevo'
 
 export const NavServi = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +15,7 @@ export const NavServi = () => {
 				<nav className='container p-6 mx-auto lg:flex lg:justify-between lg:items-center'>
 					<div className='flex items-center justify-between'>
 						<a href='#'>
-							<LogoAzul width='55%' height='100%'></LogoAzul>
+							<LogoNuevo width='70%' height='100%'></LogoNuevo>
 						</a>
 						{/* Mobile menu button */}
 						<div className='flex lg:hidden'>

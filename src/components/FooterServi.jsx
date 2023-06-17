@@ -1,4 +1,4 @@
-import { LogoAzul } from '../assets/img/svg/LogoAzul'
+import { LogoNuevo } from '../assets/img/svg/LogoNuevo'
 import { WhatsAppIcon } from '../assets/img/svg/WhatsAppIcon'
 
 export const FooterServi = () => {
@@ -7,7 +7,7 @@ export const FooterServi = () => {
 			<footer aria-label='Site Footer' className='bg-white'>
 				<div className='mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8'>
 					<div className='flex justify-center text-teal-600'>
-						<LogoAzul width='150' height='100%'></LogoAzul>
+						<LogoNuevo width='225' height='100%'></LogoNuevo>
 					</div>
 
 					<p className='mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500'>
