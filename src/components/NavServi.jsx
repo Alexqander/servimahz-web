@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { LogoNuevo } from '../assets/img/svg/LogoNuevo'
-import { useState } from 'react'
-
 
 export const NavServi = () => {
 	const [isOpen, setIsOpen] = useState(false)
